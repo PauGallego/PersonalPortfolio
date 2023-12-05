@@ -6,6 +6,13 @@ import LibroAzul from '../components/LibroAzul.astro';
 import LibroRosa from '../components/LibroRosa.astro';
 import LibroRojo from '../components/LibroRojo.astro';
 import LibroMorado from '../components/LibroMorado.astro';
+import LibroAzulTop from '../components/LibroAzulTop.astro';
+import LibroRosaTop from '../components/LibroRosaTop.astro';
+import LibroRojoTop from '../components/LibroRojoTop.astro';
+import LibroMoradoTop from '../components/LibroMoradoTop.astro';
+import BookTop from '../components/BookTop.astro';
+import CoffeTop from '../components/CoffeTop.astro';
+import Flecha from '../components/Flecha.astro';
 
 ---
 
@@ -18,8 +25,8 @@ import LibroMorado from '../components/LibroMorado.astro';
 
                 <div id="estanteria1">
                     <Estanteria 
-                    widthv='150px';
-                    heightv='150px';
+                    widthv='250px';
+                    heightv='250px';
                     />    
                 </div>
             
@@ -27,45 +34,97 @@ import LibroMorado from '../components/LibroMorado.astro';
             
             <div id="mesa">
                 <div id="libros">
-                    <div id="libroazul" class="relative">
+                    <div id="libroazul" class="absolute">
                         <LibroAzul
                         widthv='600px';
                         heightv='300px';
                         />
                     </div>
-                <div id="librorosa" class="relative">
-                        <LibroRosa
-                        widthv='600px';
-                        heightv='300px';
-                        />
-                </div>
+                    <div id="librorosa" class="absolute">
+                            <LibroRosa
+                            widthv='600px';
+                            heightv='300px';
+                            />
+                    </div>
 
-                <div id="librorojo" class="relative">
-                        <LibroRojo
-                        widthv='600px';
-                        heightv='300px';
-                        />
+                    <div id="librorojo" class="absolute">
+                            <LibroRojo
+                            widthv='600px';
+                            heightv='300px';
+                            />
+                    </div>
+                    <div id="libromorado" class="absolute">
+                            <LibroMorado
+                            widthv='800px';
+                            heightv='400px';
+                            />
+                    </div>
+                    </div>
+                    <div id="cafe1">
+                        <Coffe
+                    widthv='250px';
+                    heightv='250px';
+                    />
+                    </div>
                 </div>
-                <div id="libromorado" class="relative">
-                        <LibroMorado
-                        widthv='800px';
-                        heightv='400px';
-                        />
-                </div>
-                </div>
-                <div id="cafe1">
-                    <Coffe
-                widthv='220px';
-                heightv='220px';
-                />
-                </div>
-                
             </div>
             <div id="mesareborde">
             
             </div>
-
     </header>
+    <div id="mesatop">
+
+        <div id="flecha" class="absolute">
+            <Flecha
+            widthv='150px';
+            heightv='150px';
+            />
+        </div>
+        <div id="cafetop" class="absolute">
+            <CoffeTop
+            widthv='250px';
+            heightv='250px';
+            />
+        </div>
+
+        <div id="librosmesa">
+
+            <div id="libroazultop" class="absolute" style="display: none;">
+                <LibroAzulTop
+                    widthv='700px';
+                    heightv='700px';
+                />
+            </div>
+            
+            <div id="librorosatop" class="absolute">
+                <LibroRosaTop
+                    widthv='600px';
+                    heightv='600px';
+                />
+            </div>
+            <div id="librorojotop" class="absolute">
+                <LibroRojoTop
+                    widthv='600px';
+                    heightv='600px';
+                />
+            </div>
+            <div id="libromoradotop" class="absolute">
+                <LibroMoradoTop
+                    widthv='700px';
+                    heightv='700px';
+                />
+            </div>
+        </div>
+
+        <div id="libro">
+            <BookTop
+            widthv='1500px';
+            heightv='800px';
+            colorv='#5C9DBF'
+            colorv2='#46788E'
+            />
+        </div>
+    </div>
 
         
     </main>
@@ -110,33 +169,33 @@ import LibroMorado from '../components/LibroMorado.astro';
         padding-top: 5%;
     }
 
-    .relative {
+    .absolute {
         position: absolute;
     }
 
     #libros{
-        margin-left: 3%;
+        margin-left: 7%;
     }
 
     #libroazul{
-        bottom: 55%;
+        bottom: 58%;
         z-index: 4;
-        margin-left: 15%;
+        margin-left: 12%;
     }
 
     #librorosa{
-        bottom: 42%;
+        bottom: 48%;
         z-index: 3;
-        margin-left: 5%;
+        margin-left: 8%;
         
     }
     #librorojo{
-        bottom: 35%;
+        bottom: 40%;
         z-index: 2;
         margin-left: 10%;
     }
     #libromorado{
-        bottom: 12%;
+        bottom: 22%;
         z-index: 1;
         margin-left: 6%;
     }
@@ -144,5 +203,58 @@ import LibroMorado from '../components/LibroMorado.astro';
     header{
         position: relative;
     }
+
+    #mesatop{
+        height: 100vh;
+        background-color: #F1E0CC;
+        position: relative;
+    }
+
+    #libro{
+        margin-left: 12%;
+        padding-top: 5%;
+    }
+
+    #libroazultop{
+        bottom: 55%;
+        z-index: 4;
+        margin-left: -15%;
+       
+    }
+
+    #librorosatop{
+        bottom: 25%;
+        z-index: 3;
+        margin-left: -18%;
+        transform: rotate(90deg);
+        
+        
+    }
+    #librorojotop{
+        bottom: 30%;
+        z-index: 2;
+        margin-left: -15%;
+        transform: rotate(105deg);
+       
+    }
+    #libromoradotop{
+        bottom: 12%;
+        z-index: 1;
+        margin-left: -15%;
+        transform: rotate(85deg);
+        
+    }
+
+    #cafetop{
+        margin-left: 85%;
+        margin-top: 30%;
+    }
+
+    #flecha{
+        margin-left: 92%;
+        margin-top: 2%;
+    }
+
+
 
 </style>
