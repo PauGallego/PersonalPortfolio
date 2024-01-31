@@ -18,72 +18,68 @@ import Flecha from '../components/Flecha.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-        <header>
-
-        
+        <div id="main">
             <div id="pared">
 
                 <div id="estanteria1">
                     <Estanteria 
-                    widthv='20vw';
-                    heightv='20vh';
+                    widthv='25vh';
+                    heightv='25vh';
                     />    
                 </div>
             
             </div>
             
             <div id="mesa">
-                <div id="libros">
+                <div id="libros" class="max-w-0">
                     <div id="libroazul" class="absolute">
                         <LibroAzul
-                        widthv='50vw';
+                        widthv='60vh';
                         heightv='30vh';
                         />
                     </div>
                     <div id="librorosa" class="absolute">
                             <LibroRosa
-                            widthv='50vw';
+                            widthv='60vh';
                             heightv='30vh';
                             />
                     </div>
 
                     <div id="librorojo" class="absolute">
                             <LibroRojo
-                            widthv='50vw';
+                            widthv='60vh';
                             heightv='30vh';
                             />
                     </div>
                     <div id="libromorado" class="absolute">
                             <LibroMorado
-                            widthv='70vw';
+                            widthv='85vh';
                             heightv='50vh';
                             />
                     </div>
                     </div>
                     <div id="cafe1">
                         <Coffe
-                    widthv='25vw';
+                    widthv='25vh';
                     heightv='25vh';
                     />
                     </div>
                 </div>
             </div>
-            <div id="mesareborde">
-            
-            </div>
-    </header>
+            <div id="mesareborde"></div>
+        </div>
+        
     <div id="mesatop">
-
         <div id="flecha" class="absolute">
             <Flecha
-            widthv='5vw';
+            widthv='15vh';
             heightv='15vh';
             />
         </div>
         <div id="cafetop" class="absolute">
             <CoffeTop
-            widthv='25vw';
-            heightv= '25vh';
+            widthv='25vh';
+            heightv='25vh';
             />
         </div>
 
@@ -91,26 +87,26 @@ import Flecha from '../components/Flecha.astro';
 
             <div id="libroazultop" class="absolute" style="display: none;">
                 <LibroAzulTop
-                    widthv='70vw';
+                    widthv='70vh';
                     heightv='70vh';
                 />
             </div>
             
             <div id="librorosatop" class="absolute">
                 <LibroRosaTop
-                    widthv='60vw';
+                    widthv='60vh';
                     heightv='60vh';
                 />
             </div>
             <div id="librorojotop" class="absolute">
                 <LibroRojoTop
-                    widthv='60vw';
+                    widthv='60vh';
                     heightv='60vh';
                 />
             </div>
             <div id="libromoradotop" class="absolute">
                 <LibroMoradoTop
-                    widthv='70vw';
+                    widthv='90vh';
                     heightv='70vh';
                 />
             </div>
@@ -118,13 +114,14 @@ import Flecha from '../components/Flecha.astro';
 
         <div id="libro">
             <BookTop
-            widthv='80vw';
-            heightv='90vh';
+            widthv='150vh';
+            heightv='80vh';
             colorv='#5C9DBF'
             colorv2='#46788E'
             />
         </div>
     </div>
+    <div id="fix"></div>
 
         
     </main>
@@ -132,6 +129,8 @@ import Flecha from '../components/Flecha.astro';
 </Layout>
 
 <style>
+
+ 
 	#pared {
         background-color: #95BDE8;
         background-repeat: no-repeat;
@@ -165,7 +164,7 @@ import Flecha from '../components/Flecha.astro';
 
     #cafe1{
         
-        margin-left: 75%;
+        margin-left: 80%;
         padding-top: 5%;
     }
 
@@ -174,11 +173,11 @@ import Flecha from '../components/Flecha.astro';
     }
 
     #libros{
-        margin-left: -5%;
+        margin-left: 7%;
     }
 
     #libroazul{
-        bottom: 58%;
+        bottom: 57%;
         z-index: 4;
         margin-left: 12%;
     }
@@ -192,28 +191,31 @@ import Flecha from '../components/Flecha.astro';
     #librorojo{
         bottom: 40%;
         z-index: 2;
-        margin-left: 15%;
+        margin-left: 10%;
     }
     #libromorado{
         bottom: 15%;
         z-index: 1;
-        margin-left: 0%;
-    }
-
-    header{
-        position: relative;
+        margin-left: 2%;
     }
 
     #mesatop{
-        height: 100vh;
+        height: 99vh;
         background-color: #F1E0CC;
         position: relative;
-        overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
+    
+    #fix{
+        height: 1vh;
+        background-color: #F1E0CC;
+    }
+   
 
     #libro{
         margin-left: 12%;
-        padding-top: 2%;
+        padding-top: 5%;
     }
 
     #libroazultop{
@@ -226,7 +228,7 @@ import Flecha from '../components/Flecha.astro';
     #librorosatop{
         bottom: 25%;
         z-index: 3;
-        margin-left: -30%;
+        margin-left: -18%;
         transform: rotate(90deg);
         
         
@@ -234,29 +236,29 @@ import Flecha from '../components/Flecha.astro';
     #librorojotop{
         bottom: 30%;
         z-index: 2;
-        margin-left: -25%;
+        margin-left: -15%;
         transform: rotate(105deg);
        
     }
     #libromoradotop{
         bottom: 12%;
         z-index: 1;
-        margin-left: -30%;
+        margin-left: -20%;
         transform: rotate(85deg);
         
     }
 
     #cafetop{
-        margin-left: 79%;
-        margin-top: 35%;
-        
+        margin-left: 85%;
+        margin-top: 30%;
     }
 
     #flecha{
-        margin-left: 95%;
+        margin-left: 92%;
         margin-top: 2%;
     }
 
+  
 
 
 </style>
