@@ -24,4 +24,19 @@ const { heightv, widthv } = Astro.props;
     </g>
 </svg>
     
-	
+<style>
+
+    svg{
+			transition: all 1s;
+	}
+
+	@media screen and (max-width: 1400px)  {
+
+		svg{
+			width: calc(10px*5vh);
+			height:  calc(10px*2.5vh);
+		}
+	}
+</style>
+
+

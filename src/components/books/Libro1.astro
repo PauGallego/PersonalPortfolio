@@ -18,3 +18,18 @@ const { heightv, widthv } = Astro.props;
 	<path d="M10.3195 150.782L196.749 229.829L196.312 203.161L10.4414 125.018L10.3195 150.782Z" fill="#B89692"/>
 	</g>
 </svg>
+
+<style>
+
+    svg{
+			transition: all 1s;
+	}
+
+	@media screen and (max-width: 1400px)  {
+
+		svg{
+			width: calc(10px*5vh);
+			height:  calc(10px*2.5vh);
+		}
+	}
+</style>

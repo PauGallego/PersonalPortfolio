@@ -6,11 +6,22 @@ interface Props {
 
 const { heightv, widthv } = Astro.props;
 ---
-<svg height= `${heightv}` width= `${widthv}` viewBox="0 0 193 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg height= `${heightv}` width= `${widthv}`  viewBox="0 0 193 182" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M178.398 13.772H14.6074V168.196H178.398V13.772Z" fill="#D8C5B4"/>
 	<path d="M0 0V181.962H193V0H0ZM178.398 168.196H14.6074V13.772H178.398V168.196Z" fill="#F1E0CC"/>
 	<path d="M178.398 168.196H14.6074L27.3005 148.028H166.746L178.398 168.196Z" fill="#C9B6A7"/>
 </svg>
 	
+
+<style>
+ @media screen and (max-width: 1400px)  {
+
+	svg{
+		height: 20vh;
+		width: 20vh;
+	}
+}
+
+</style>
 
 

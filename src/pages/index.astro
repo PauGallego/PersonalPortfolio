@@ -13,15 +13,16 @@ import Libro4Top from '../components/books/Libro4Top.astro';
 import BookTop from '../components/mainbook/BookTop.astro';
 import CoffeTop from '../components/cofee/CoffeTop.astro';
 import Flecha from '../components/Flecha.astro';
+import Kindle from '../components/kindle/kindle.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-        <div id="main">
-            <div id="pared">
+        <div id="main" >
+            <div id="pared" >
 
-                <div id="estanteria1">
+                <div id="estanteria1" class="hidden lg:block">
                     <Estanteria 
                     widthv='25vh';
                     heightv='25vh';
@@ -29,8 +30,13 @@ import Flecha from '../components/Flecha.astro';
                 </div>
             
             </div>
+            <div id="title" >
+                <h1 >Hi, Im PAU</h1>
+                <h2 >Choose a book </h2>
+            </div>
             
-            <div id="mesa">
+
+            <div id="mesa" class="hidden lg:block">
                 <div id="libros" class="max-w-0">
                     <div id="Libro1" class="absolute">
                         <Libro1
@@ -66,26 +72,26 @@ import Flecha from '../components/Flecha.astro';
                     </div>
                 </div>
             </div>
-            <div id="mesareborde"></div>
+            <div id="mesareborde" class="hidden lg:block"></div>
         </div>
         
     <div id="mesatop">
-        <div id="flecha" class="absolute">
+        <div id="flecha" class="absolute hidden lg:block">
             <Flecha
             widthv='15vh';
             heightv='15vh';
             />
         </div>
-        <div id="cafetop" class="absolute">
+        <div id="cafetop" class="absolute hidden lg:block">
             <CoffeTop
             widthv='25vh';
             heightv='25vh';
             />
         </div>
 
-        <div id="librosmesa">
+        <div id="librosmesa" class="hidden lg:block ">
 
-            <div id="Libro1top" class="absolute" style="display: none;">
+            <div id="Libro1top" class="absolute " style="display: none;">
                 <Libro1Top
                     widthv='70vh';
                     heightv='70vh';
@@ -112,7 +118,7 @@ import Flecha from '../components/Flecha.astro';
             </div>
         </div>
 
-        <div id="libro">
+        <div id="libro" class="hidden lg:block">
             <BookTop
             widthv='160vh';
             heightv='85vh';
@@ -120,6 +126,16 @@ import Flecha from '../components/Flecha.astro';
             colorv2='#46788E'
             />
         </div>
+
+
+        <div id="kindle" class="block lg:hidden">
+            <Kindle
+                    widthv='45vh';
+                    heightv='75vh';
+                />
+        </div>
+
+        <h2 class="absolute" id="temp">En construcción :)</h2>
     </div>
         
     </main>
@@ -128,6 +144,33 @@ import Flecha from '../components/Flecha.astro';
 
 <style>
 
+
+    #temp{
+        top: 30vh;
+        left: 35vw;
+        font-size: 2em;
+    }
+
+    #title{
+        font-family: 'Bebas Neue', sans-serif;
+        position: absolute;
+        top: 20vh;
+        left: 55vw;
+        z-index: 5;
+        transition: all 0.5s;
+    }
+
+    #title h1{
+        font-size: 7vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    #title h2{
+        font-size: 3vw;
+        padding: 0;
+        margin-top: -50px;
+    }
  
 	#pared {
         background-color: #95BDE8;
@@ -171,7 +214,7 @@ import Flecha from '../components/Flecha.astro';
     }
 
     #libros{
-        margin-left: 7%;
+        margin-left: 3%;
     }
 
     #Libro1{
@@ -208,6 +251,12 @@ import Flecha from '../components/Flecha.astro';
     
     #libro{
         margin-left: 12%;
+        padding-top: 4%;
+    }
+
+
+    #kindle{
+        margin-left: 30vw;
         padding-top: 4%;
     }
 
@@ -250,6 +299,85 @@ import Flecha from '../components/Flecha.astro';
         margin-left: 93%;
         margin-top: 2%;
     }
+
+
+
+    @media screen and (max-width: 1400px)  {
+
+        #title{
+            left: 65vw;
+            top: 25vh;
+        }
+
+        #title h1 {
+           font-size: 5em;
+        }
+
+        #title h2 {
+           font-size: 2em;
+           margin-top: -30px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 1020px)  {
+
+        #title{
+            left: 38vw;
+            top: 0vh;
+        }
+
+        #pared{
+            height: 18vh;
+        }
+
+        #mesatop{
+            height: 84vh;
+        }
+
+
+        #kindle{
+            margin-left: 30vw;
+        }
+    }
+
+    @media screen and (max-width: 800px)  {
+
+        #kindle{
+            margin-left: 22vw;
+        }
+
+        #temp {
+            font-size: 1.5em;
+        }
+    }
+
+
+    @media screen and (max-width: 500px)  {
+
+        #title{
+            left: 20vw;
+            top: 0vh;
+        }
+
+        #mesatop{
+            height: 84vh;
+        }
+
+        #kindle{
+            margin-left: 2vw;
+        }
+
+        #temp{
+            left: 10vw;
+        }
+    }
+
+    
+   
+
+
 
   
 
