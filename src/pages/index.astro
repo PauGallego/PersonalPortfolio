@@ -144,6 +144,9 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 <style>
 
+    #flecha{
+        z-index: 5;
+    }
 
     #temp{
         top: 30vh;
@@ -210,6 +213,10 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     .absolute {
         position: absolute;
+    }
+
+    #libro {
+        z-index: 2;
     }
 
     #libros{
@@ -280,6 +287,10 @@ import Kindle from '../components/kindle/Kindle.astro';
         padding-top: 3vh;
     }
 
+    body{
+            background-color: #95BDE8;
+        }
+
 
     @media screen and (max-width: 1600px)  {
 
@@ -296,6 +307,7 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 
     @media screen and (max-width: 1400px)  {
+
 
         #title{
             left: 65vw;
@@ -336,10 +348,33 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 
     @media screen and (max-width: 1020px)  {
+        
+
+        #kindle{
+            background-color: #95BDE8;
+        }
+        
+        #pared{
+            display: none;
+        }
+
+        #mesatop{
+            overflow: visible;
+        }
 
         #title{
-            left: 38vw;
-            top: 0vh;
+            position: static;
+        }
+
+        #title h1{
+            font-size: 15vw;
+            text-align: center;
+        }
+
+        #title h2{
+            font-size: 5vw;
+            text-align: center;
+            margin-top: -20px;
         }
 
         #pared{
@@ -348,6 +383,7 @@ import Kindle from '../components/kindle/Kindle.astro';
 
         #mesatop{
             height: 84vh;
+            background-color: #95BDE8;
         }
     }
 
@@ -364,14 +400,10 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     @media screen and (max-width: 500px)  {
 
-        #title{
-            left: 25vw;
-            top: 0vh;
-        }
 
         #mesatop{
             height: 86vh;
-            overflow: scroll;
+            overflow: visible;
         }
 
 
@@ -381,8 +413,6 @@ import Kindle from '../components/kindle/Kindle.astro';
 
         #kindle{
             padding: 0;
-            margin: 0;
-            width: 100%;
         }
     }
 
