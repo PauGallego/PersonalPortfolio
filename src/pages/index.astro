@@ -76,12 +76,6 @@ import Kindle from '../components/kindle/Kindle.astro';
         </div>
         
     <div id="mesatop">
-        <div id="flecha " class=" absolute hidden lg:flex justify-end w-[102%]">
-            <Flecha
-            widthv='15vh';
-            heightv='15vh';
-            />
-        </div>
         <div id="cafetop" class="absolute hidden lg:flex justify-end items-end w-[98vw] h-[88vh] ">
             <CoffeTop
             widthv='25vh';
@@ -126,7 +120,12 @@ import Kindle from '../components/kindle/Kindle.astro';
             colorv2='#46788E'
             />
         </div>
-
+        <div id="flecha " class=" absolute hidden lg:flex justify-end w-[102%]">
+            <Flecha
+            widthv='15vh';
+            heightv='15vh';
+            />
+        </div>
 
         <div id="kindle" class="flex lg:hidden">
             <Kindle
@@ -144,8 +143,10 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 <style>
 
+
+
     #flecha{
-        z-index: 5;
+        z-index: 2;
     }
 
     #temp{
@@ -163,13 +164,13 @@ import Kindle from '../components/kindle/Kindle.astro';
     }
 
     #title h1{
-        font-size: 7vw;
+        font-size: 7em;
         padding: 0;
         margin: 0;
     }
 
     #title h2{
-        font-size: 3vw;
+        font-size: 3em;
         padding: 0;
         margin-top: -50px;
     }
@@ -215,9 +216,6 @@ import Kindle from '../components/kindle/Kindle.astro';
         position: absolute;
     }
 
-    #libro {
-        z-index: 2;
-    }
 
     #libros{
         margin-left: 3%;
@@ -347,7 +345,7 @@ import Kindle from '../components/kindle/Kindle.astro';
     }
 
 
-    @media screen and (max-width: 1020px)  {
+    @media screen and (max-width: 1025px)  {
         
 
         #kindle{
@@ -367,12 +365,12 @@ import Kindle from '../components/kindle/Kindle.astro';
         }
 
         #title h1{
-            font-size: 15vw;
+            font-size: 5em;
             text-align: center;
         }
 
         #title h2{
-            font-size: 5vw;
+            font-size: 3em;
             text-align: center;
             margin-top: -20px;
         }
