@@ -112,13 +112,14 @@ import Kindle from '../components/kindle/Kindle.astro';
             </div>
         </div>
 
-        <div id="libro" class="absolute hidden lg:flex justify-center items-center w-[100vw] h-[100vh]">
+        <div id="libro" class="absolute hidden lg:flex flex-col justify-center items-center w-[100vw] h-[100vh]">
             <BookTop
             widthv='120vh';
             heightv='85vh';
             colorv='#5C9DBF'
             colorv2='#46788E'
             />
+            <p class="absolute hidden lg:flex text-5xl">En construcción :)</p>
         </div>
         <div id="flecha " class=" absolute hidden lg:flex justify-end w-[101%] pt-[20px]">
             <Flecha
@@ -127,11 +128,12 @@ import Kindle from '../components/kindle/Kindle.astro';
             />
         </div>
 
-        <div id="kindle" class="flex lg:hidden ">
+        <div id="kindle" class="flex flex-col lg:hidden ">
             <Kindle
                     widthv='45vh';
                     heightv='75vh';
                 />
+            <p class="absolute text-5xl">En construcción :)</p>
         </div>
 
     </div>
