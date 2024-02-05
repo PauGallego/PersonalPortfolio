@@ -7,7 +7,7 @@ interface Props {
 const { heightv, widthv } = Astro.props;
 ---
 
-<svg height= `${heightv}` width= `${widthv}` viewBox="0 0 655 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg height= `${heightv}` width= `${widthv}` viewBox="0 0 655 253" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ '--svg-width': widthv, '--svg-height': heightv }} > 
 	<path d="M16.3568 84.535L227.888 0.0341797L654.954 82.381L459.154 171.358L16.3568 84.535Z" fill="#DC708A"/>
 	<path d="M654.954 82.381L653.795 92.1214L645.594 96.545L646.011 152.959L650.239 151.016L649.314 160.241L457.823 252.213C457.823 252.213 440.435 246.371 442.163 216.708C444.226 181.245 459.154 171.347 459.154 171.347L654.954 82.3705V82.381Z" fill="#CF6579"/>
 	<path d="M459.154 171.358C459.154 171.358 448.372 183.568 448.372 212.642C448.372 243.197 457.823 252.223 457.823 252.223L12.3325 168.237C12.3325 168.237 -0.909182 153.107 0.777782 126.407C2.51556 98.8461 16.3568 84.535 16.3568 84.535L459.154 171.358Z" fill="#BF4E6A"/>
@@ -20,11 +20,10 @@ const { heightv, widthv } = Astro.props;
 	
 <style>
 
-	@media screen and (max-width: 1400px)  {
-
-		svg{
-			width: calc(10px*5vh);
-			height:  calc(10px*2.5vh);
+	svg{
+			width: max(var(--svg-width), 500px);
+			height:max(var(--svg-height), 250px);
 		}
-	}
-</style>
+	
+	</style>
+	

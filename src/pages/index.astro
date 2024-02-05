@@ -19,25 +19,22 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-        <div id="main" class="overflow-hidden" >
+        <div id="main" class="" >
+            <div id="title" >
+                <h1 >Hi, Im PAU</h1>
+                <h2 >Choose a book </h2>
+            </div>
             <div id="pared" >
-
                 <div id="estanteria1" class="hidden lg:block">
                     <Estanteria 
                     widthv='25vh';
                     heightv='25vh';
                     />    
                 </div>
-            
             </div>
-            <div id="title" >
-                <h1 >Hi, Im PAU</h1>
-                <h2 >Choose a book </h2>
-            </div>
-            
-
-            <div id="mesa" class="hidden lg:block">
-                <div id="libros" class="max-w-0">
+           
+            <div id="mesa" class="hidden lg:flex flex-col">
+                <div id="libros" class="flex flex-col">
                     <div id="Libro1" class="absolute">
                         <Libro1
                         widthv='60vh';
@@ -76,7 +73,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         </div>
         
     <div id="mesatop">
-        <div id="cafetop" class="absolute hidden lg:flex justify-end items-end w-[98vw] h-[88vh] ">
+        <div id="cafetop" class="absolute hidden lg:flex justify-end items-end ">
             <CoffeTop
             widthv='25vh';
             heightv='25vh';
@@ -87,8 +84,8 @@ import Kindle from '../components/kindle/Kindle.astro';
 
             <div id="Libro1top" class="absolute " style="display: none;">
                 <Libro1Top
-                    widthv='70vh';
-                    heightv='70vh';
+                    widthv='60vh';
+                    heightv='60vh';
                 />
             </div>
             
@@ -112,9 +109,9 @@ import Kindle from '../components/kindle/Kindle.astro';
             </div>
         </div>
 
-        <div id="libro" class="absolute hidden lg:flex flex-col justify-center items-center w-[100vw] h-[100vh]">
+        <div id="libro" class="absolute hidden lg:flex flex-col justify-center items-center mt-[50px]">
             <BookTop
-            widthv='120vh';
+            widthv='100vw';
             heightv='85vh';
             colorv='#5C9DBF'
             colorv2='#46788E'
@@ -158,22 +155,28 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     #title{
         font-family: 'Bebas Neue', sans-serif;
+        width:  78vw;
         position: absolute;
-        top: 20vh;
-        left: 55vw;
+        display: flex;
+        flex-direction: column;
         z-index: 5;
+        height: max(80vh, 700px);
+        align-items: end;
+        justify-content: center;
     }
 
     #title h1{
         font-size: 7em;
         padding: 0;
         margin: 0;
+        width: fit-content;
     }
 
     #title h2{
         font-size: 3em;
         padding: 0;
         margin-top: -50px;
+        width: fit-content;
     }
  
 	#pared {
@@ -182,7 +185,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 50vh;
+        height: max(50vh, 440px);
     }
     #mesa {
         background-color: #F1E0CC;
@@ -190,7 +193,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 42vh;
+        height: max(42vh, 353px);
     }
     #mesareborde {
         background-color: #D8C5B4;
@@ -198,7 +201,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 8vh;
+        height: max(8vh, 87px);
     }
 
     #estanteria1{
@@ -220,33 +223,36 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     #libros{
         margin-left: 3%;
+        height: 100;
     }
 
     #Libro1{
-        bottom: 57%;
+        /*bottom: 57%; */
+
+        
         z-index: 4;
-        margin-left: 12%;
+        margin-left: 12vw;
     }
 
     #Libro2{
-        bottom: 48%;
+       /* bottom: 48%; */
         z-index: 3;
         margin-left: 8%;
         
     }
     #Libro3{
-        bottom: 40%;
+        /* / bottom: 40%; */
         z-index: 2;
         margin-left: 10%;
     }
     #Libro4{
-        bottom: 15%;
+        /* /bottom: 15%;   */
         z-index: 1;
         margin-left: 2%;
     }
 
     #mesatop{
-        height: 99vh;
+        height: max(99vh, 970px);
         background-color: #F1E0CC;
         position: relative;
         margin: 0;
@@ -290,6 +296,12 @@ import Kindle from '../components/kindle/Kindle.astro';
             background-color: #95BDE8;
         }
 
+
+    #cafetop{
+        width: max(96vw, 900px);
+        height: max(85vh, 800px);
+
+    }
 
     @media screen and (max-width: 1600px)  {
 
@@ -377,11 +389,11 @@ import Kindle from '../components/kindle/Kindle.astro';
         }
 
         #pared{
-            height: 18vh;
+            height: max(18vh, 194px);
         }
 
         #mesatop{
-            height: 84vh;
+            height: max(84vh, 908px);
             background-color: #95BDE8;
         }
     }

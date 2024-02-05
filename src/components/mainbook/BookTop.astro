@@ -8,7 +8,7 @@ interface Props {
 
 const { heightv, widthv, colorv, colorv2  } = Astro.props;
 ---
-  <svg height= `${heightv}` width= `${widthv}`viewBox="0 0 968 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg height= `${heightv}` width= `${widthv}`viewBox="0 0 968 733" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ '--svg-width': widthv, '--svg-height': heightv }} >
 		<path d="M474.26 0H0.875V732.299H474.26V0Z" fill=`${colorv}`/>
 		<path d="M967.78 0H494.395V732.299H967.78V0Z" fill=`${colorv}`/>
 		<path d="M512.371 0H456.438V732.299H512.371V0Z" fill=`${colorv2}`/>
@@ -22,5 +22,10 @@ const { heightv, widthv, colorv, colorv2  } = Astro.props;
 
 <style>
 
-
+	svg{
+			width: max(var(--svg-width), 1200px);
+			height:max(var(--svg-height), 850px);
+		}
+	
 </style>
+      

@@ -7,7 +7,7 @@ interface Props {
 const { heightv, widthv } = Astro.props;
 ---
 
-<svg height= `${heightv}` width= `${widthv}`  viewBox="0 0 869 421" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg height= `${heightv}` width= `${widthv}`  viewBox="0 0 869 421" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ '--svg-width': widthv, '--svg-height': heightv }} >
 	<g style="mix-blend-mode:multiply" opacity="0.66">
 	<path d="M613.465 382.939L507.959 420.818L-10 319.39L220.921 234.049L866.5 252.5L613.465 382.939Z" fill="#B89692"/>
 	</g>
@@ -33,11 +33,9 @@ const { heightv, widthv } = Astro.props;
 
 <style>
 
-	@media screen and (max-width: 1400px)  {
+svg {
+    width: max(var(--svg-width), 750px);
+    height: max(var(--svg-height), 400px);
+  }
 
-		svg{
-			width: calc(10px*6.5vh);
-			height: calc(10px*4.5vh);
-		}
-	}
 </style>
