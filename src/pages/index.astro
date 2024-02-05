@@ -316,6 +316,11 @@ import Kindle from '../components/kindle/Kindle.astro';
     @media screen and (max-width: 1600px)  {
 
 
+        #title{
+
+            width: 90vw;
+        }
+
         #librosmesa{
             display: none;
         }
@@ -330,11 +335,12 @@ import Kindle from '../components/kindle/Kindle.astro';
     @media screen and (max-width: 1400px)  {
 
 
+
         #title{
-            width:  85vw;
-            height: max(80vh, 700px);
-       
+
+            width: 95vw;
         }
+
         #title h1 {
            font-size: 5em;
         }
@@ -356,12 +362,7 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     @media screen and (max-width: 1200px)  {
 
-        #title{
-            width:  95vw;
-            height: max(80vh, 700px);
-       
-        }
-
+      
         #cafe1{
             display: none;
         }
@@ -371,11 +372,11 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     @media screen and (max-width: 1025px)  {
         #title{
-            width:  100vw;
+           
             justify-content: center;
             align-items: center;
             height:  auto;
-       
+            
         }
 
         #kindle{
@@ -387,7 +388,9 @@ import Kindle from '../components/kindle/Kindle.astro';
         }
 
         #mesatop{
-            overflow: visible;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         #title{
@@ -428,19 +431,14 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     @media screen and (max-width: 500px)  {
 
-
-        #mesatop{
-            height: 86vh;
-            overflow: visible;
-        }
-
-
         #temp{
             left: 20vw;
         }
 
         #kindle{
             padding: 0;
+            margin: 0;
+           
         }
     }
 
