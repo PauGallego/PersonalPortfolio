@@ -13,7 +13,9 @@ import Libro4Top from '../components/books/Libro4Top.astro';
 import BookTop from '../components/mainbook/BookTop.astro';
 import CoffeTop from '../components/cofee/CoffeTop.astro';
 import Flecha from '../components/Flecha.astro';
+import FlechaMovil from '../components/FlechaMovil.astro';
 import Kindle from '../components/kindle/Kindle.astro';
+import X from '../components/X.astro';
 
 ---
 
@@ -117,7 +119,7 @@ import Kindle from '../components/kindle/Kindle.astro';
                 <div id="pag2">
                     <div class="texto">
                         <h3 class="text-center text-5xl m-[50px] merriweather font-bold">ABOUT ME:</h3>
-                    <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in backend programming and system administration.</p>
+                    <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
                     <p class="text-2xl m-[30px] merriweather">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
                     <p class="text-2xl m-[30px] merriweather">My hobbies include playing video games, listening to music and reading good books.</p>
              
@@ -146,7 +148,25 @@ import Kindle from '../components/kindle/Kindle.astro';
                     widthv='45vh';
                     heightv='75vh';
                 />
-            <p class="absolute text-5xl">En construcción :)</p>
+            <div id="pagmovil">
+                <div class="equis">
+                    <X
+                    widthv='30px';
+                    heightv='30px';
+                />  
+                </div>
+                <div class="imagentitulo flex flex-col justify-center items-center">
+                    <h3 class="text-center text-5xl mt-[50px] merriweather font-bold">ABOUT ME:</h3>
+                    <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[70%]">
+                </div>
+                <div class="flechamovil">
+                    <FlechaMovil 
+                    widthv='80px';
+                    heightv='50px';
+
+                />  
+                
+            </div>
         </div>
 
     </div>
@@ -157,7 +177,27 @@ import Kindle from '../components/kindle/Kindle.astro';
 
 <style>
 
+    .equis{
+        width: 95%;
+        justify-content: end;
+        display: flex;
+        margin-top: 2vh;
+       
+    }
 
+    .flechamovil{
+        width: 95%;
+        justify-content: end;
+        display: flex; 
+        margin-top: 2vw; 
+    }
+
+    #pagmovil{
+        width: 490px;
+        height: 740px;
+        margin-bottom: 50px;
+        position: absolute;
+    }
 
     #flecha{
         z-index: 2;
@@ -245,25 +285,25 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     #Libro1{
         
-        height: 950px;
+        height: max(950px, 50vw);
         z-index: 4;
         margin-left: 12vw;
     }
 
     #Libro2{
 
-        height: 750px;
+        height: max(750px, 40vw);
         z-index: 3;
         margin-left: 8%;
         
     }
     #Libro3{
-        height: 600px;
+        height: max(600px, 32vw);
         z-index: 2;
         margin-left: 10%;
     }
     #Libro4{
-        height: 500px;
+        height: max(500px, 25vw);
         z-index: 1;
         margin-left: 2%;
     }
@@ -344,7 +384,7 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     #pag1{
         height: max(89vh, 690px);
-        width: max(33vw, 450px);
+        width: max(33vw, 480px);
         background-color: #EFE8CA;
         border-left: #CEC9B6 1vw solid;
         margin-right: 2vw;
@@ -353,9 +393,10 @@ import Kindle from '../components/kindle/Kindle.astro';
 
     #pag2{
         height: max(89vh, 690px);
-        width: max(33vw, 450px);
+        width: max(33vw, 480px);
         background-color: #EFE8CA;
         border-right: #CEC9B6 1vw solid;
+        
     }
 
     .posit{
@@ -388,7 +429,6 @@ import Kindle from '../components/kindle/Kindle.astro';
         border-top: max(10px, 0.5vw) solid #8C5364 ;
         margin-top: -0.9vh;
     }
-
     
     @media screen and (max-width: 1600px)  {
 
@@ -433,6 +473,12 @@ import Kindle from '../components/kindle/Kindle.astro';
 
         #cafetop{
             display: none;
+        }
+
+        .texto p{
+            font-size: 0.8em;
+            padding: 0;
+            margin: 5px;
         }
 
     }
@@ -503,6 +549,13 @@ import Kindle from '../components/kindle/Kindle.astro';
         #temp {
             font-size: 1.5em;
         }
+
+        #pagmovil{
+            width: 405px;
+            height: 610px;
+            margin-bottom: 40px;
+      
+        }
     }
 
 
@@ -517,14 +570,8 @@ import Kindle from '../components/kindle/Kindle.astro';
             margin: 0;
            
         }
+      
     }
-
-    
-   
-
-
-
-  
 
 
 </style>
