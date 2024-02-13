@@ -131,10 +131,13 @@ import X from '../components/X.astro';
             </div>
         </div>
         <div id="flecha " class=" absolute hidden lg:flex justify-end w-[101%] pt-[20px]">
-            <Flecha
-            widthv='15vh';
-            heightv='15vh';
-            />
+            <div id="flechita">
+                <Flecha
+                widthv='15vh';
+                heightv='15vh';
+                />
+            </div>
+           
         </div>
         <div id="cafetop" class="absolute hidden lg:flex justify-end items-end ">
             <CoffeTop
@@ -176,6 +179,10 @@ import X from '../components/X.astro';
 </Layout>
 
 <style>
+
+    #flechita{
+        z-index: 10;
+    }
 
     .equis{
         width: 95%;
@@ -429,6 +436,9 @@ import X from '../components/X.astro';
         border-top: max(10px, 0.5vw) solid #8C5364 ;
         margin-top: -0.9vh;
     }
+
+
+ 
     
     @media screen and (max-width: 1600px)  {
 
@@ -575,5 +585,6 @@ import X from '../components/X.astro';
       
     }
 
+  
 
 </style>
