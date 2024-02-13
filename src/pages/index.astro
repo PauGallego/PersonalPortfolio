@@ -105,14 +105,28 @@ import Kindle from '../components/kindle/Kindle.astro';
             </div>
         </div>
 
-        <div id="libro" class="absolute hidden lg:flex flex-col justify-center items-center ]">
-            <BookTop
-            widthv='105vw';
-            heightv='90vh';
-            colorv='#5C9DBF'
-            colorv2='#46788E'
-            />
-            <p class="absolute hidden lg:flex text-5xl">En construcción :)</p>
+        <div id="libro" class="absolute hidden lg:flex  justify-center items-center ">
+            
+            <div id="divlibro" class="flex">
+                <div class="tela">
+                    
+                </div>
+                <div id="pag1" class="flex justify-center items-center">
+                    <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[90%] mb-[50px]">
+                </div>
+                <div id="pag2">
+                    <div class="texto">
+                        <h3 class="text-center text-5xl m-[50px] merriweather font-bold">ABOUT ME:</h3>
+                    <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in backend programming and system administration.</p>
+                    <p class="text-2xl m-[30px] merriweather">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
+                    <p class="text-2xl m-[30px] merriweather">My hobbies include playing video games, listening to music and reading good books.</p>
+             
+                    </div>
+                    <div class="posit flex items-center justify-center escrita">
+                        <p class="indie-flower text-3xl">Download cv</p>
+                    </div>
+                </div>  
+            </div>
         </div>
         <div id="flecha " class=" absolute hidden lg:flex justify-end w-[101%] pt-[20px]">
             <Flecha
@@ -313,6 +327,70 @@ import Kindle from '../components/kindle/Kindle.astro';
         height: max(85vh, 700px);
         }
 
+    #libro{
+        width: 100vw;
+        margin: auto;
+
+    }
+
+    #divlibro{
+        width: max(65vw, 1000px);
+        background-color: #CEC9B6;
+        border-left: #5C9DBF 20px solid;
+        border-right: #5C9DBF 20px solid;
+        border-bottom: #5C9DBF 20px solid;
+        border-top: #5C9DBF 10px solid;
+    }
+
+    #pag1{
+        height: max(89vh, 690px);
+        width: max(33vw, 450px);
+        background-color: #EFE8CA;
+        border-left: #CEC9B6 15px solid;
+        margin-right: 50px;
+    }
+    
+
+    #pag2{
+        height: max(89vh, 690px);
+        width: max(33vw, 450px);
+        background-color: #EFE8CA;
+        border-right: #CEC9B6 15px solid;
+    }
+
+    .posit{
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        background-color: #FAFAB0;
+        height: 20%;
+        border-top: #EEEEA9 30px solid;
+        margin-top: 8vh;
+    }
+
+    .texto{
+        width: 80%;
+        text-align: left;
+        margin-left: 80px;
+    }
+
+    .texto p{
+        font-size: max(1vw, 13px);
+    }
+
+    .texto h3{
+        font-size: max(2vw, 13px);
+    }
+
+    .tela{
+        position: absolute;
+        height: max(91vh, 710px);
+        width: 20px;
+        background-color: #D6A7B4;
+        margin-left: max(35vw, 530px);
+        border-top: 10px solid #8C5364 ;
+        margin-top: -10px;
+    }
     @media screen and (max-width: 1600px)  {
 
 
