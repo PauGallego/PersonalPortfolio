@@ -336,18 +336,18 @@ import Kindle from '../components/kindle/Kindle.astro';
     #divlibro{
         width: max(65vw, 1000px);
         background-color: #CEC9B6;
-        border-left: #5C9DBF 20px solid;
-        border-right: #5C9DBF 20px solid;
-        border-bottom: #5C9DBF 20px solid;
-        border-top: #5C9DBF 10px solid;
+        border-left: #5C9DBF 1vw solid;
+        border-right: #5C9DBF 1vw solid;
+        border-bottom: #5C9DBF 1vw solid;
+        border-top: #5C9DBF 0.5vw solid;
     }
 
     #pag1{
         height: max(89vh, 690px);
         width: max(33vw, 450px);
         background-color: #EFE8CA;
-        border-left: #CEC9B6 15px solid;
-        margin-right: 50px;
+        border-left: #CEC9B6 1vw solid;
+        margin-right: 2vw;
     }
     
 
@@ -355,7 +355,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         height: max(89vh, 690px);
         width: max(33vw, 450px);
         background-color: #EFE8CA;
-        border-right: #CEC9B6 15px solid;
+        border-right: #CEC9B6 1vw solid;
     }
 
     .posit{
@@ -364,7 +364,7 @@ import Kindle from '../components/kindle/Kindle.astro';
         width: 50%;
         background-color: #FAFAB0;
         height: 20%;
-        border-top: #EEEEA9 30px solid;
+        border-top: max(10px, 1vw) #EEEEA9 solid;
         margin-top: 8vh;
     }
 
@@ -374,23 +374,22 @@ import Kindle from '../components/kindle/Kindle.astro';
         margin-left: 80px;
     }
 
+    
     .texto p{
-        font-size: max(1vw, 13px);
-    }
-
-    .texto h3{
-        font-size: max(2vw, 13px);
+        font-size: 1em;
     }
 
     .tela{
         position: absolute;
         height: max(91vh, 710px);
-        width: 20px;
+        width: max(20px, 1vw);
         background-color: #D6A7B4;
         margin-left: max(35vw, 530px);
-        border-top: 10px solid #8C5364 ;
-        margin-top: -10px;
+        border-top: max(10px, 0.5vw) solid #8C5364 ;
+        margin-top: -0.9vh;
     }
+
+    
     @media screen and (max-width: 1600px)  {
 
 
