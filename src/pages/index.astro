@@ -40,29 +40,39 @@ import X from '../components/X.astro';
             <div id="mesa" class="hidden lg:flex flex-col">
                 <div id="libros" class="absolute hidden lg:flex justify-start items-center w-[90vw] h-[100vh]">
                     <div id="Libro1" class="absolute ">
-                        <Libro1
-                        widthv='60vh';
-                        heightv='30vh';
-                        />
+                        <a href="#mesatop">
+                            <Libro1
+                            widthv='60vh';
+                            heightv='30vh';
+                            /> 
+                        </a>
+                        
                     </div>
                     <div id="Libro2" class="absolute ">
+                        <a href="">
                             <Libro2
                             widthv='60vh';
                             heightv='30vh';
                             />
+                        </a>
                     </div>
 
                     <div id="Libro3" class="absolute " >
+                        <a href="">
                             <Libro3
                             widthv='60vh';
                             heightv='30vh';
                             />
+                        </a>
                     </div>
                     <div id="Libro4" class="absolute ">
+                        <a href="">
                             <Libro4
                             widthv='75vh';
                             heightv='40vh';
                             />
+                        </a>
+                            
                     </div>
                     </div>
                     <div id="cafe1">
@@ -101,7 +111,7 @@ import X from '../components/X.astro';
             </div>
             <div id="Libro4top" class="absolute ml-[-28%] ">
                 <Libro4Top
-                    widthv='48vw';
+                    widthv='45vw';
                     heightv='90vh';
                 />
             </div>
@@ -132,10 +142,13 @@ import X from '../components/X.astro';
         </div>
         <div id="flecha " class=" absolute hidden lg:flex justify-end w-[101%] pt-[20px]">
             <div id="flechita">
-                <Flecha
+                <a href="#title">
+                    <Flecha
                 widthv='15vh';
                 heightv='15vh';
                 />
+                </a>
+                
             </div>
            
         </div>
@@ -171,9 +184,7 @@ import X from '../components/X.astro';
                 
             </div>
         </div>
-
     </div>
-        
     </main>
 
 </Layout>
@@ -288,31 +299,33 @@ import X from '../components/X.astro';
     #libros{
         margin-left: 5%;
         height: 250px;
+        z-index: 5;
     }
 
     #Libro1{
-        
-        height: max(950px, 50vw);
         z-index: 4;
         margin-left: 12vw;
+        margin-bottom: max(72vh, 700px);
     }
 
     #Libro2{
 
-        height: max(750px, 40vw);
         z-index: 3;
         margin-left: 8%;
+        margin-bottom: max(55vh, 500px);
         
     }
     #Libro3{
-        height: max(600px, 32vw);
+       
         z-index: 2;
         margin-left: 10%;
+        margin-bottom: max(35vh, 300px);
     }
     #Libro4{
-        height: max(500px, 25vw);
+        
         z-index: 1;
         margin-left: 6%;
+        margin-bottom: max(10vh, 100px);
     }
 
     #mesatop{
