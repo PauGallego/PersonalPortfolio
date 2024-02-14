@@ -43,7 +43,7 @@ import X from '../components/X.astro';
                         <a href="#mesatop">
                             <Libro1
                             widthv='60vh';
-                            heightv='30vh';
+                            heightv='5vh';
                             /> 
                         </a>
                         
@@ -52,7 +52,7 @@ import X from '../components/X.astro';
                         <a href="">
                             <Libro2
                             widthv='60vh';
-                            heightv='30vh';
+                            heightv='5vh';
                             />
                         </a>
                     </div>
@@ -61,7 +61,7 @@ import X from '../components/X.astro';
                         <a href="">
                             <Libro3
                             widthv='60vh';
-                            heightv='30vh';
+                            heightv='5vh';
                             />
                         </a>
                     </div>
@@ -376,8 +376,9 @@ import X from '../components/X.astro';
 
 
     #cafetop{
-        width: max(97vw, 900px);
+        width: max(450px, 27vw);
         height: max(80vh, 650px);
+        margin-left: 70vw;
 
     }
 
@@ -427,6 +428,15 @@ import X from '../components/X.astro';
         height: 20%;
         border-top: max(10px, 1vw) #EEEEA9 solid;
         margin-top: 8vh;
+        z-index: 10;
+        transition: 0.5s;
+    }
+
+    .posit:hover{
+        border-top: max(8px, 0.8vw) #EEEEA9 solid;
+        transform: rotateX(40deg) translateY(-30px) ;
+        box-shadow: 0 35px 2px -2px #9e9d9d;
+
     }
 
     .texto{

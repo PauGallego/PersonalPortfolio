@@ -77,12 +77,19 @@ const { heightv, widthv } = Astro.props;
 	svg{
 			width: max(var(--svg-width), 600px);
 			height:max(var(--svg-height), 300px);
-			transition: 1s;
+			transition: 0.8s;
 			
 		}
 
 	svg:hover{
-		transform: translateX(200px);
+		transform: translateX(150px);
+	}
+
+	@media (min-width: 2500px) {
+		svg {
+			width: var(--svg-width);
+			height: 30vh;
+		}
 	}
 
 </style>
