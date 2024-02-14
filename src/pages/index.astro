@@ -43,7 +43,7 @@ import X from '../components/X.astro';
             <div id="mesa" class="hidden lg:flex flex-col">
                 <div id="libros" class="absolute hidden lg:flex justify-start items-center w-[90vw] h-[100vh]">
                     <div id="Libro1" class="absolute ">
-                        <a href="#mesatop">
+                        <a href="#mesatop" id="clicklib1">
                             <Libro1
                             widthv='60vh';
                             heightv='5vh';
@@ -52,7 +52,7 @@ import X from '../components/X.astro';
                         
                     </div>
                     <div id="Libro2" class="absolute ">
-                        <a href="">
+                        <a href="#mesatop" id="clicklib2">
                             <Libro2
                             widthv='60vh';
                             heightv='5vh';
@@ -61,7 +61,7 @@ import X from '../components/X.astro';
                     </div>
 
                     <div id="Libro3" class="absolute " >
-                        <a href="">
+                        <a href="#mesatop" id="clicklib3">
                             <Libro3
                             widthv='60vh';
                             heightv='5vh';
@@ -69,7 +69,7 @@ import X from '../components/X.astro';
                         </a>
                     </div>
                     <div id="Libro4" class="absolute ">
-                        <a href="">
+                        <a href="#mesatop" id="clicklib4">
                             <Libro4
                             widthv='75vh';
                             heightv='40vh';
@@ -127,7 +127,7 @@ import X from '../components/X.astro';
             <div id="libro" class="absolute hidden lg:flex  justify-center items-center ">
                 
                 <div id="divlibro" class="flex aboutcolores">
-                    <div class="tela telaAbout">
+                    <div class="tela telaAbout" id="tela">
                         
                     </div>
                     <div id="pag1" class="flex justify-center items-center">
@@ -287,6 +287,97 @@ import X from '../components/X.astro';
     <script>
         let book1 = document.getElementById("click1");
         let pagmovil = document.getElementById("pagmovil");
+        let divlibro = document.getElementById("divlibro");
+        let tela = document.getElementById("tela");
+
+
+        let clicklib1 = document.getElementById("clicklib1");
+        let clicklib2 = document.getElementById("clicklib2");
+        let clicklib3 = document.getElementById("clicklib3");
+        let clicklib4 = document.getElementById("clicklib4");
+
+        let libro1top = document.getElementById("Libro1top");
+        let libro2top = document.getElementById("Libro2top");
+        let libro3top = document.getElementById("Libro3top");
+        let libro4top = document.getElementById("Libro4top");
+
+
+        clicklib1.onclick = (event) => {
+                divlibro.classList.remove("skillscolores");
+                divlibro.classList.remove("projectscolores");
+                divlibro.classList.remove("contactcolores");
+                divlibro.classList.add("aboutcolores");
+
+                tela.classList.remove("telaSkills");
+                tela.classList.remove("telaProjects");
+                tela.classList.remove("telaContact");
+                tela.classList.add("telaAbout");
+
+                libro1top.classList.add("hidden");
+                libro2top.classList.remove("hidden");
+                libro3top.classList.remove("hidden");
+                libro4top.classList.remove("hidden");
+                
+        };
+
+        clicklib2.onclick = (event) => {
+                divlibro.classList.add("skillscolores");
+                divlibro.classList.remove("projectscolores");
+                divlibro.classList.remove("contactcolores");
+                divlibro.classList.remove("aboutcolores");
+
+                tela.classList.add("telaSkills");
+                tela.classList.remove("telaProjects");
+                tela.classList.remove("telaContact");
+                tela.classList.remove("telaAbout");
+
+                libro1top.classList.remove("hidden");
+                libro2top.classList.add("hidden");
+                libro3top.classList.remove("hidden");
+                libro4top.classList.remove("hidden");
+
+                
+        };
+
+        clicklib3.onclick = (event) => {
+                divlibro.classList.remove("skillscolores");
+                divlibro.classList.add("projectscolores");
+                divlibro.classList.remove("contactcolores");
+                divlibro.classList.remove("aboutcolores");
+
+                tela.classList.remove("telaSkills");
+                tela.classList.add("telaProjects");
+                tela.classList.remove("telaContact");
+                tela.classList.remove("telaAbout");
+
+                libro1top.classList.remove("hidden");
+                libro2top.classList.remove("hidden");
+                libro3top.classList.add("hidden");
+                libro4top.classList.remove("hidden");
+
+                
+        };
+
+        clicklib4.onclick = (event) => {
+                divlibro.classList.remove("skillscolores");
+                divlibro.classList.remove("projectscolores");
+                divlibro.classList.add("contactcolores");
+                divlibro.classList.remove("aboutcolores");
+
+                tela.classList.remove("telaSkills");
+                tela.classList.remove("telaProjects");
+                tela.classList.add("telaContact");
+                tela.classList.remove("telaAbout");
+
+                libro1top.classList.remove("hidden");
+                libro2top.classList.remove("hidden");
+                libro3top.classList.remove("hidden");
+                libro4top.classList.add("hidden");
+                
+        };
+
+
+
     
         book1.onclick = (event) => {
             event.preventDefault();
@@ -539,6 +630,30 @@ import X from '../components/X.astro';
         border-top: #5C9DBF 0.5vw solid;
     }
 
+    .skillscolores{
+        border-left: #DC708A 1vw solid;
+        border-right: #DC708A 1vw solid;
+        border-bottom: #DC708A 1vw solid;
+        border-top: #DC708A 0.5vw solid;
+    }
+
+
+    .projectscolores{
+        border-left: #9B2C2C 1vw solid;
+        border-right: #9B2C2C 1vw solid;
+        border-bottom: #9B2C2C 1vw solid;
+        border-top: #9B2C2C 0.5vw solid;
+    }
+
+
+    .contactcolores{
+        border-left: #827CBB 1vw solid;
+        border-right: #827CBB 1vw solid;
+        border-bottom: #827CBB 1vw solid;
+        border-top: #827CBB 0.5vw solid;
+    }
+
+
     #pag1{
         height: max(89vh, 690px);
         width: max(33vw, 480px);
@@ -596,6 +711,21 @@ import X from '../components/X.astro';
 
     .telaAbout{
         background-color: #D6A7B4;
+        border-top: max(10px, 0.5vw) solid #8C5364 ;
+    }
+
+    .telaSkills{
+        background-color: #5C9DBF;
+        border-top: max(10px, 0.5vw) solid #5C53A2 ;
+    }
+
+    .telaProjects{
+        background-color: #827CBB;
+        border-top: max(10px, 0.5vw) solid #5C53A2 ;
+    }
+
+    .telaContact{
+        background-color: #DC708A;
         border-top: max(10px, 0.5vw) solid #8C5364 ;
     }
 
