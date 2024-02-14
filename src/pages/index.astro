@@ -134,9 +134,11 @@ import X from '../components/X.astro';
                     <p class="text-2xl m-[30px] merriweather">My hobbies include playing video games, listening to music and reading good books.</p>
              
                     </div>
-                    <div class="posit flex items-center justify-center escrita">
-                        <p class="indie-flower text-3xl">Download cv</p>
-                    </div>
+                    <a href="/cv/cv.pdf"  target="_blank">
+                        <div class="posit flex items-center justify-center escrita">
+                            <p class="indie-flower text-3xl" >Download cv</p>
+                        </div>
+                    </a>
                 </div>  
             </div>
         </div>
@@ -165,8 +167,8 @@ import X from '../components/X.astro';
                     heightv='75vh';
                 />
             <div id="pagmovil">
-                
-                <div id="sec1">
+
+                <div id="sec1" class="">
                     <div id="menukindle" class="flex  mt-[20px] items-center">
                         <div id="search" class="w-[300px] h-[30px] bg-[#D9D9D9] ml-[20px] rounded-3xl flex justify-start items-center">
                             <span class="icon-[iconamoon--search] text-l ml-[20px]"></span>
@@ -219,21 +221,45 @@ import X from '../components/X.astro';
                         <X
                         widthv='30px';
                         heightv='30px';
-                    />  
+                        />  
                     </div>
                     <div class="imagentitulo flex flex-col justify-center items-center">
-                        <h3 class="text-center text-5xl mt-[50px] merriweather font-bold">ABOUT ME:</h3>
+                        <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">ABOUT ME:</h3>
                         <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[70%]">
                     </div>
-                    <div class="flechamovil">
+                    <div class="flechamovil" id="aboutadelante">
                         <FlechaMovil 
                         widthv='80px';
                         heightv='50px';
+                        rotation='1'
     
                     />  
                 </div>
-               
-                
+                </div>
+                <div id="about2" class="hidden">
+                    <div class="equis" id="cerrarabout2">
+                        <X
+                        widthv='30px';
+                        heightv='30px';
+                    />  
+                    </div>
+                    <div class="imagentitulo flex flex-col justify-center items-center">
+                        <p class="text-xl m-[20px] bookerly">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
+                        <p class="text-xl m-[20px] bookerly">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
+                        <p class="text-xl m-[20px] bookerly">My hobbies include playing video games, listening to music and reading good books.</p>
+
+                        <p class="text-xl m-[20px] bookerly download"> <a href="/cv/cv.pdf" target="_blank">Download CV</a></p>
+
+                 
+                    </div>
+                    <div class="flechamovil2" id="aboutatras">
+                        <FlechaMovil 
+                        widthv='80px';
+                        heightv='50px';
+                        rotation='-1'
+    
+                    />  
+                </div>
             </div>
         </div>
     </div>
@@ -250,9 +276,7 @@ import X from '../components/X.astro';
             let about1 = document.getElementById("about1");
             about1.style.display = "block";
     
-            pagmovil.style.animation = "none";
-            void pagmovil.offsetWidth; 
-            pagmovil.style.animation = "refresh 0.3s linear";
+            refresh();
         };
     
         let cerrarabout = document.getElementById("cerrarabout");
@@ -263,11 +287,54 @@ import X from '../components/X.astro';
             sec1.style.display = "block";
             let about1 = document.getElementById("about1");
             about1.style.display = "none";
+          
+            refresh();
+        };
+        
+        let cerrarabout2 = document.getElementById("cerrarabout2");
     
+        cerrarabout2.onclick = (event) => {
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            sec1.style.display = "block";
+            let about2 = document.getElementById("about2");
+            about2.style.display = "none";
+
+            refresh();
+        };
+        
+
+        let aboutadelante = document.getElementById("aboutadelante");
+
+        aboutadelante.onclick = (event) => {
+            event.preventDefault();
+            let about1 = document.getElementById("about1");
+            about1.style.display = "none";
+            let about2 = document.getElementById("about2");
+            about2.style.display = "block";
+
+
+            refresh();
+        };
+
+        let aboutatras = document.getElementById("aboutatras");
+
+        aboutatras.onclick = (event) => {
+            event.preventDefault();
+            let about1 = document.getElementById("about1");
+            about1.style.display = "block";
+            let about2 = document.getElementById("about2");
+            about2.style.display = "none";
+           
+            refresh();
+        };
+
+        function refresh(){
             pagmovil.style.animation = "none";
             void pagmovil.offsetWidth; 
             pagmovil.style.animation = "refresh 0.3s linear";
-        };
+        }
+
     </script>
     
     
@@ -277,6 +344,11 @@ import X from '../components/X.astro';
 </Layout>
 
 <style>
+
+    .download a{
+        text-decoration: underline;
+        font-weight: bold;
+    }
 
     #pagmovil{
         animation: forwards refresh 0.3s linear;
@@ -319,6 +391,13 @@ import X from '../components/X.astro';
     .flechamovil{
         width: 95%;
         justify-content: end;
+        display: flex; 
+        margin-top: 2vw; 
+    }
+
+    .flechamovi2l{
+        width: 95%;
+        justify-content: start;
         display: flex; 
         margin-top: 2vw; 
     }
