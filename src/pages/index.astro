@@ -96,10 +96,10 @@ import X from '../components/X.astro';
             <!-- Libros -->
             <div id="librosmesa" class=" absolute hidden lg:flex justify-start items-center">
 
-                <div id="Libro1top" class="absolute " style="display: none;">
+                <div id="Libro1top" class="absolute  ml-[-18%] hidden " >
                     <Libro1Top
-                        widthv='40vw';
-                        heightv='40vh';
+                        widthv='35vw';
+                        heightv='60vh';
                     />
                 </div>
                 
@@ -126,26 +126,33 @@ import X from '../components/X.astro';
             <!--Libro principal-->
             <div id="libro" class="absolute hidden lg:flex  justify-center items-center ">
                 
-                <div id="divlibro" class="flex">
-                    <div class="tela">
+                <div id="divlibro" class="flex aboutcolores">
+                    <div class="tela telaAbout">
                         
                     </div>
                     <div id="pag1" class="flex justify-center items-center">
-                        <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[90%] mb-[50px]">
+
+                        <div id="aboutpag1">
+                            <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[90%] mb-[50px]">
+                        </div>
+                        
                     </div>
                     <div id="pag2">
-                        <div class="texto">
-                            <h3 class="text-center text-5xl m-[50px] merriweather font-bold">ABOUT ME:</h3>
-                        <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
-                        <p class="text-2xl m-[30px] merriweather">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
-                        <p class="text-2xl m-[30px] merriweather">My hobbies include playing video games, listening to music and reading good books.</p>
-                
-                        </div>
-                        <a href="/cv/cv.pdf"  target="_blank">
-                            <div class="posit flex items-center justify-center escrita">
-                                <p class="indie-flower text-3xl" >Download cv</p>
+
+                        <div id="aboutpag2" class="h-[100%]">
+                            <div class="texto">
+                                <h3 class="text-center text-5xl m-[50px] merriweather font-bold">ABOUT ME:</h3>
+                            <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
+                            <p class="text-2xl m-[30px] merriweather">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
+                            <p class="text-2xl m-[30px] merriweather">My hobbies include playing video games, listening to music and reading good books.</p>
+                    
                             </div>
-                        </a>
+                            <a href="/cv/cv.pdf"  target="_blank">
+                                <div class="posit flex items-center justify-center escrita">
+                                    <p class="indie-flower text-3xl" >Download cv</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>  
                 </div>
             </div>
@@ -522,6 +529,10 @@ import X from '../components/X.astro';
     #divlibro{
         width: max(65vw, 1000px);
         background-color: #CEC9B6;
+       
+    }
+
+    .aboutcolores{
         border-left: #5C9DBF 1vw solid;
         border-right: #5C9DBF 1vw solid;
         border-bottom: #5C9DBF 1vw solid;
@@ -579,10 +590,13 @@ import X from '../components/X.astro';
         position: absolute;
         height: max(91vh, 710px);
         width: max(20px, 1vw);
-        background-color: #D6A7B4;
         margin-left: max(35vw, 530px);
-        border-top: max(10px, 0.5vw) solid #8C5364 ;
         margin-top: -0.9vh;
+    }
+
+    .telaAbout{
+        background-color: #D6A7B4;
+        border-top: max(10px, 0.5vw) solid #8C5364 ;
     }
 
     
