@@ -165,31 +165,130 @@ import X from '../components/X.astro';
                     heightv='75vh';
                 />
             <div id="pagmovil">
-                <div class="equis">
-                    <X
-                    widthv='30px';
-                    heightv='30px';
-                />  
-                </div>
-                <div class="imagentitulo flex flex-col justify-center items-center">
-                    <h3 class="text-center text-5xl mt-[50px] merriweather font-bold">ABOUT ME:</h3>
-                    <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[70%]">
-                </div>
-                <div class="flechamovil">
-                    <FlechaMovil 
-                    widthv='80px';
-                    heightv='50px';
+                
+                <div id="sec1">
+                    <div id="menukindle" class="flex  mt-[20px] items-center">
+                        <div id="search" class="w-[300px] h-[30px] bg-[#D9D9D9] ml-[20px] rounded-3xl flex justify-start items-center">
+                            <span class="icon-[iconamoon--search] text-l ml-[20px]"></span>
+                        </div>
+                       
+                            <span class="icon-[bxs--cart] ml-[20px]"></span>
+                            <span class="icon-[ph--dots-three-outline-vertical-fill] ml-[10px]"></span>
+                    </div>
+                    <div id="menukindle2" class="flex items-center justify-between w-[90%] m-auto mt-[5px] ">
+                        <span class="icon-[akar-icons--settings-horizontal] text-xs"></span>
+                        <span class="icon-[material-symbols--sort]"></span>
+    
+                    </div>
 
-                />  
+                    <div id="libroskindle" class=" border-t-2 border-[grey] mt-[5px] h-[470px] w-[97%] m-auto flex flex-wrap items-center justify-center">
+
+                            <a href="" id="click1">
+                                <div id="aboutmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
+                                    <p class="text-center text-white titulo pt-[30px]">ABOUT ME</p>
+                                    
+                                    
+                                </div>
+    
+                            </a>
+                            <a href="" >
+                                <div id="skillsmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
+                                    <p class="text-center pt-[30px] text-white titulo">SKILLS</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div id="projectsmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
+                                    <p class="text-center pt-[30px] text-white titulo">PROJECTS</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div id="contactmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
+                                    <p class="text-center pt-[30px] text-white titulo">CONTACT</p>
+                                </div>
+                            </a>
+                           
+                            
+                    
+                    </div>
+    
+                </div>
+              
+
+                <div id="about1" class="hidden">
+                    <div class="equis" id="cerrarabout">
+                        <X
+                        widthv='30px';
+                        heightv='30px';
+                    />  
+                    </div>
+                    <div class="imagentitulo flex flex-col justify-center items-center">
+                        <h3 class="text-center text-5xl mt-[50px] merriweather font-bold">ABOUT ME:</h3>
+                        <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[70%]">
+                    </div>
+                    <div class="flechamovil">
+                        <FlechaMovil 
+                        widthv='80px';
+                        heightv='50px';
+    
+                    />  
+                </div>
+               
                 
             </div>
         </div>
     </div>
+
+    <script>
+        let book1 = document.getElementById("click1");
+    
+        book1.onclick = (event) => {
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            sec1.style.display = "none";
+            let about1 = document.getElementById("about1");
+            about1.style.display = "block";
+        };
+
+
+        let cerrarabout = document.getElementById("cerrarabout");
+    
+        cerrarabout.onclick = (event) => {
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            sec1.style.display = "block";
+            let about1 = document.getElementById("about1");
+            about1.style.display = "none";
+        };
+    </script>
+    
     </main>
 
 </Layout>
 
 <style>
+
+
+    #aboutmovil{
+        background-image: url("/books/1.png");
+    }
+
+
+    #skillsmovil{
+        background-image: url("/books/2.png");
+    }
+
+
+    #projectsmovil{
+        background-image: url("/books/3.png");
+    }
+
+
+    #contactmovil{
+        background-image: url("/books/4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
     #flechita{
         z-index: 10;
@@ -574,8 +673,24 @@ import X from '../components/X.astro';
             height: max(84vh, 908px);
             background-color: #95BDE8;
         }
+       
     }
 
+
+    @media screen and (min-width: 800px)  {
+        #search{
+            width: 350px;
+        }
+        #menukindle span{
+            margin-left: 30px;
+        }
+        .fixmovil{
+            width: 150px;
+            height: 200px;
+            margin-top: 60px;
+        }
+
+    }
 
 
     @media screen and (max-width: 800px)  {
@@ -591,6 +706,8 @@ import X from '../components/X.astro';
             margin-bottom: 40px;
       
         }
+
+       
     }
 
 
