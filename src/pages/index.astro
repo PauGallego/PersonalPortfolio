@@ -238,8 +238,10 @@ import X from '../components/X.astro';
         </div>
     </div>
 
+    
     <script>
         let book1 = document.getElementById("click1");
+        let pagmovil = document.getElementById("pagmovil");
     
         book1.onclick = (event) => {
             event.preventDefault();
@@ -247,9 +249,12 @@ import X from '../components/X.astro';
             sec1.style.display = "none";
             let about1 = document.getElementById("about1");
             about1.style.display = "block";
+    
+            pagmovil.style.animation = "none";
+            void pagmovil.offsetWidth; 
+            pagmovil.style.animation = "refresh 0.3s linear";
         };
-
-
+    
         let cerrarabout = document.getElementById("cerrarabout");
     
         cerrarabout.onclick = (event) => {
@@ -258,8 +263,14 @@ import X from '../components/X.astro';
             sec1.style.display = "block";
             let about1 = document.getElementById("about1");
             about1.style.display = "none";
+    
+            pagmovil.style.animation = "none";
+            void pagmovil.offsetWidth; 
+            pagmovil.style.animation = "refresh 0.3s linear";
         };
     </script>
+    
+    
     
     </main>
 
@@ -267,6 +278,9 @@ import X from '../components/X.astro';
 
 <style>
 
+    #pagmovil{
+        animation: forwards refresh 0.3s linear;
+    }
 
     #aboutmovil{
         background-image: url("/books/1.png");
@@ -725,6 +739,30 @@ import X from '../components/X.astro';
       
     }
 
-  
+    
+    @keyframes refresh{
+        0%{
+            filter: invert();
+            backdrop-filter: invert();
+
+
+        }100%{
+            filter: none;
+        }
+            
+    }
+
+
+    @keyframes refresh2{
+        0%{
+            filter: invert();
+            backdrop-filter: invert();
+
+
+        }100%{
+            filter: none;
+        }
+            
+    }
 
 </style>
