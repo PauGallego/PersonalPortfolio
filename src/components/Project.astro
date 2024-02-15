@@ -1,0 +1,57 @@
+---
+interface Props {
+	title: string;
+	image: string;
+	desc: string;
+	link: string;
+	linkname: string;
+	marginbottom: string;
+	margintop: string;
+}
+
+const { title, image, desc, link, linkname, marginbottom, margintop } = Astro.props;
+---
+
+	<div class="flex justify-center items-center flex-col" style={{ '--img-top': margintop, '--img-bot': marginbottom }}>
+		<h3 class="text-center text-5xl m-[50px] merriweather font-bold">{title}</h3>
+		<img src={image} alt={title} class="imagencita"/>
+		<p class="w-[80%] text-justify textito merriweather">{desc}</p>
+		<a href={link}  target="_blank" class="w-[100%] h-[100%]]">
+			<div class="posit flex items-center justify-center">
+				<p class="indie-flower text-3xl p-[20px] mt-[30px] mb-[30px]" >{linkname}</p>
+			</div>
+		</a>
+
+		
+	</div>
+
+		
+	<style>
+
+		.imagencita{
+			width: max(15vw, 100px);
+			margin-top: var(--img-top);
+			margin-bottom: var(--img-bot);
+			
+		}
+		.posit{
+			text-align: center;
+			margin: auto;
+			width: 50%;
+			background-color: #FAFAB0;
+			height: 20%;
+			border-top: max(10px, 1vw) #EEEEA9 solid;
+			margin-top: 8vh;
+			z-index: 10;
+			transition: 0.5s;
+		}
+
+		.posit:hover{
+			border-top: max(8px, 0.8vw) #EEEEA9 solid;
+			transform: rotateX(40deg) translateY(-30px) ;
+			box-shadow: 0 35px 2px -2px #9e9d9d;
+
+		}
+				
+	</style>
+

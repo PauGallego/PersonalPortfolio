@@ -14,6 +14,7 @@ import CoffeTop from '../components/cofee/CoffeTop.astro';
 import Flecha from '../components/Flecha.astro';
 import FlechaMovil from '../components/FlechaMovil.astro';
 import Kindle from '../components/kindle/Kindle.astro';
+import Project from '../components/Project.astro';
 import X from '../components/X.astro';
 
 ---
@@ -130,16 +131,52 @@ import X from '../components/X.astro';
                     <div class="tela telaAbout" id="tela">
                         
                     </div>
-                    <div id="pag1" class="flex justify-center items-center">
+                    <div id="pag1" class="">
+                        
+                        <!-- About -->
+                        <div id="aboutpag1" class="flex justify-center items-center h-[100%]  ">
+                            <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[90%] mb-[20px]">
+                        </div>
 
-                        <div id="aboutpag1">
-                            <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[90%] mb-[50px]">
+                        <!-- Skills -->
+                        <div id="skillspag1" class="h-[100%] hidden">
+                            <div class="texto">
+                                <h3 class="text-center text-5xl m-[50px] merriweather font-bold">SKILLS:</h3>
+                                <ul class="list-disc">
+                                    <li class="text-xl merriweather m-[20px] textomovil">Linux</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">Docker</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">VPS</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">HTML5/CSS3/JS</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">Node JS</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">PHP</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">SpringBoot</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">C++</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">Java</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">Python</li>
+                                    <li class="text-xl merriweather m-[20px] textomovil">PLSQL</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Projects -->
+                        <div id="projectspag1" class="h-[100%] hidden">
+                            <Project
+                                title='SteelCodeTeam';
+                                desc='An open-source development group dedicated to bringing creative ideas to life within the captivating universe of Brandon Sanderson Cosmere book series'.                                ';
+                                image='/imgs/steel.png';
+                                link='http://steelcode.team/';
+                                linkname='Access Website';
+                                margintop='';
+                                marginbottom= 'max(6vh, 50px)';
+                            />
+
                         </div>
                         
                     </div>
                     <div id="pag2">
 
-                        <div id="aboutpag2" class="h-[100%]">
+                         <!-- About -->
+                        <div id="aboutpag2" class="h-[100%] ">
                             <div class="texto">
                                 <h3 class="text-center text-5xl m-[50px] merriweather font-bold">ABOUT ME:</h3>
                             <p class="text-2xl m-[30px] merriweather">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
@@ -148,11 +185,31 @@ import X from '../components/X.astro';
                     
                             </div>
                             <a href="/cv/cv.pdf"  target="_blank">
-                                <div class="posit flex items-center justify-center escrita">
+                                <div class="posit flex items-center justify-center">
                                     <p class="indie-flower text-3xl" >Download cv</p>
                                 </div>
                             </a>
                         </div>
+
+                        <!-- Skills -->
+                        <div id="skillspag2" class="flex justify-center items-center h-[100%] hidden">
+                            <img src="/imgs/CUERVO_PORTATIL_SINFONDO.png" alt="cuervo sentado" class="w-[90%]">
+                        </div>
+
+                        <!-- Projects -->
+                        <div id="projectspag2" class="h-[100%] hidden ">
+                            <Project
+                                title='Odoo2Dev';
+                                desc='I"ve crafted a Docker container on GitHub for Odoo module development. This container streamlines the process, offering a consistent environment with all dependencies.'                                ';
+                                image='/imgs/odoo.png';
+                                link='https://github.com/PauGallego/odoo2dev';
+                                linkname='Access Github';
+                                margintop='max(10vh, 50px)';
+                                marginbottom= 'max(13vh, 100px)';
+                            />
+
+                        </div>
+
                     </div>  
                 </div>
             </div>
@@ -262,7 +319,7 @@ import X from '../components/X.astro';
                             heightv='30px';
                         />  
                         </div>
-                        <div class="imagentitulo flex flex-col justify-center items-center">
+                        <div class=" flex flex-col justify-center items-center">
                             <p class="text-xl m-[20px] bookerly">Hi, I'm Pau, a web developer with experience in web programming and system administration.</p>
                             <p class="text-xl m-[20px] bookerly">I've been involved in some open source projects, where I've learned and contributed to the development community.</p>
                             <p class="text-xl m-[20px] bookerly">My hobbies include playing video games, listening to music and reading good books.</p>
@@ -301,85 +358,125 @@ import X from '../components/X.astro';
         let libro3top = document.getElementById("Libro3top");
         let libro4top = document.getElementById("Libro4top");
 
+        let aboutpag1 = document.getElementById("aboutpag1");
+        let aboutpag2 = document.getElementById("aboutpag2");
+        let skillspag1 = document.getElementById("skillspag1");
+        let skillspag2 = document.getElementById("skillspag2");
+        let projectspag1 = document.getElementById("projectspag1");
+        let projectspag2 = document.getElementById("projectspag2");
+
+
 
         clicklib1.onclick = (event) => {
-                divlibro.classList.remove("skillscolores");
-                divlibro.classList.remove("projectscolores");
-                divlibro.classList.remove("contactcolores");
-                divlibro.classList.add("aboutcolores");
 
-                tela.classList.remove("telaSkills");
-                tela.classList.remove("telaProjects");
-                tela.classList.remove("telaContact");
-                tela.classList.add("telaAbout");
+            divlibro.classList.remove("skillscolores");
+            divlibro.classList.remove("projectscolores");
+            divlibro.classList.remove("contactcolores");
+            divlibro.classList.add("aboutcolores");
 
-                libro1top.classList.add("hidden");
-                libro2top.classList.remove("hidden");
-                libro3top.classList.remove("hidden");
-                libro4top.classList.remove("hidden");
+            tela.classList.remove("tela2");
+            tela.classList.add("tela");
+            tela.classList.remove("telaSkills");
+            tela.classList.remove("telaProjects");
+            tela.classList.remove("telaContact");
+            tela.classList.add("telaAbout");
+
+            libro1top.classList.add("hidden");
+            libro2top.classList.remove("hidden");
+            libro3top.classList.remove("hidden");
+            libro4top.classList.remove("hidden");
+
+            aboutpag1.classList.remove("hidden");
+            aboutpag2.classList.remove("hidden");
+            skillspag1.classList.add("hidden");
+            skillspag2.classList.add("hidden");
+            projectspag1.classList.add("hidden");
+            projectspag2.classList.add("hidden");
+                
+
                 
         };
 
         clicklib2.onclick = (event) => {
-                divlibro.classList.add("skillscolores");
-                divlibro.classList.remove("projectscolores");
-                divlibro.classList.remove("contactcolores");
-                divlibro.classList.remove("aboutcolores");
 
-                tela.classList.add("telaSkills");
-                tela.classList.remove("telaProjects");
-                tela.classList.remove("telaContact");
-                tela.classList.remove("telaAbout");
+            divlibro.classList.add("skillscolores");
+            divlibro.classList.remove("projectscolores");
+            divlibro.classList.remove("contactcolores");
+            divlibro.classList.remove("aboutcolores");
 
-                libro1top.classList.remove("hidden");
-                libro2top.classList.add("hidden");
-                libro3top.classList.remove("hidden");
-                libro4top.classList.remove("hidden");
+            tela.classList.add("tela2");
+            tela.classList.remove("tela");
+            tela.classList.add("telaSkills");
+            tela.classList.remove("telaProjects");
+            tela.classList.remove("telaContact");
+            tela.classList.remove("telaAbout");
+
+            libro1top.classList.remove("hidden");
+            libro2top.classList.add("hidden");
+            libro3top.classList.remove("hidden");
+            libro4top.classList.remove("hidden");
+
+            aboutpag1.classList.add("hidden");
+            aboutpag2.classList.add("hidden");
+            skillspag1.classList.remove("hidden");
+            skillspag2.classList.remove("hidden");
+            projectspag1.classList.add("hidden");
+            projectspag2.classList.add("hidden");
 
                 
         };
 
         clicklib3.onclick = (event) => {
-                divlibro.classList.remove("skillscolores");
-                divlibro.classList.add("projectscolores");
-                divlibro.classList.remove("contactcolores");
-                divlibro.classList.remove("aboutcolores");
+        
+            divlibro.classList.remove("skillscolores");
+            divlibro.classList.add("projectscolores");
+            divlibro.classList.remove("contactcolores");
+            divlibro.classList.remove("aboutcolores");
 
-                tela.classList.remove("telaSkills");
-                tela.classList.add("telaProjects");
-                tela.classList.remove("telaContact");
-                tela.classList.remove("telaAbout");
+            tela.classList.remove("telaSkills");
+            tela.classList.add("telaProjects");
+            tela.classList.remove("telaContact");
+            tela.classList.remove("telaAbout");
 
-                libro1top.classList.remove("hidden");
-                libro2top.classList.remove("hidden");
-                libro3top.classList.add("hidden");
-                libro4top.classList.remove("hidden");
+            libro1top.classList.remove("hidden");
+            libro2top.classList.remove("hidden");
+            libro3top.classList.add("hidden");
+            libro4top.classList.remove("hidden");
+
+            aboutpag1.classList.add("hidden");
+            aboutpag2.classList.add("hidden");
+            skillspag1.classList.add("hidden");
+            skillspag2.classList.add("hidden");
+            projectspag1.classList.remove("hidden");
+            projectspag2.classList.remove("hidden");
 
                 
         };
 
         clicklib4.onclick = (event) => {
-                divlibro.classList.remove("skillscolores");
-                divlibro.classList.remove("projectscolores");
-                divlibro.classList.add("contactcolores");
-                divlibro.classList.remove("aboutcolores");
 
-                tela.classList.remove("telaSkills");
-                tela.classList.remove("telaProjects");
-                tela.classList.add("telaContact");
-                tela.classList.remove("telaAbout");
+            divlibro.classList.remove("skillscolores");
+            divlibro.classList.remove("projectscolores");
+            divlibro.classList.add("contactcolores");
+            divlibro.classList.remove("aboutcolores");
 
-                libro1top.classList.remove("hidden");
-                libro2top.classList.remove("hidden");
-                libro3top.classList.remove("hidden");
-                libro4top.classList.add("hidden");
-                
+            tela.classList.remove("telaSkills");
+            tela.classList.remove("telaProjects");
+            tela.classList.add("telaContact");
+            tela.classList.remove("telaAbout");
+
+            libro1top.classList.remove("hidden");
+            libro2top.classList.remove("hidden");
+            libro3top.classList.remove("hidden");
+            libro4top.classList.add("hidden");
+            
         };
 
 
 
     
         book1.onclick = (event) => {
+
             event.preventDefault();
             let sec1 = document.getElementById("sec1");
             sec1.style.display = "none";
@@ -392,6 +489,7 @@ import X from '../components/X.astro';
         let cerrarabout = document.getElementById("cerrarabout");
     
         cerrarabout.onclick = (event) => {
+
             event.preventDefault();
             let sec1 = document.getElementById("sec1");
             sec1.style.display = "block";
@@ -404,6 +502,7 @@ import X from '../components/X.astro';
         let cerrarabout2 = document.getElementById("cerrarabout2");
     
         cerrarabout2.onclick = (event) => {
+
             event.preventDefault();
             let sec1 = document.getElementById("sec1");
             sec1.style.display = "block";
@@ -417,6 +516,7 @@ import X from '../components/X.astro';
         let aboutadelante = document.getElementById("aboutadelante");
 
         aboutadelante.onclick = (event) => {
+
             event.preventDefault();
             let about1 = document.getElementById("about1");
             about1.style.display = "none";
@@ -430,6 +530,7 @@ import X from '../components/X.astro';
         let aboutatras = document.getElementById("aboutatras");
 
         aboutatras.onclick = (event) => {
+
             event.preventDefault();
             let about1 = document.getElementById("about1");
             about1.style.display = "block";
@@ -440,10 +541,12 @@ import X from '../components/X.astro';
         };
 
         function refresh(){
+
             pagmovil.style.animation = "none";
             void pagmovil.offsetWidth; 
             pagmovil.style.animation = "refresh 0.3s linear";
         }
+        
 
     </script>
     
@@ -701,11 +804,19 @@ import X from '../components/X.astro';
         font-size: 1em;
     }
 
+    .tela2{
+        position: absolute;
+        height: max(91vh, 710px);
+        width: max(20px, 1vw);
+        margin-left: max(28vw, 420px);
+        margin-top: -0.9vh;
+    }
+
     .tela{
         position: absolute;
         height: max(91vh, 710px);
         width: max(20px, 1vw);
-        margin-left: max(35vw, 530px);
+        margin-left: max(34vw, 530px);
         margin-top: -0.9vh;
     }
 
@@ -837,7 +948,6 @@ import X from '../components/X.astro';
             padding: 0;
             margin: 5px;
         }
-
     }
 
 
@@ -942,6 +1052,14 @@ import X from '../components/X.astro';
             width: 150px;
             height: 200px;
             margin-top: 60px;
+        }
+
+        .bookerly{
+            font-size: 1.8em;
+        }
+
+        .download{
+            margin-top: 100px;
         }
 
     }
