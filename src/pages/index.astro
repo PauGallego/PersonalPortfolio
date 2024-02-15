@@ -171,6 +171,35 @@ import X from '../components/X.astro';
                             />
 
                         </div>
+
+                        <!-- Contact -->
+
+                        <div id="contactpag1" class="h-[100%] flex-col items-center flex hidden">
+                            <h3 class="text-center text-5xl m-[50px] merriweather font-bold">Contact:</h3>
+
+                            <div>
+                            
+
+                                    <div class="flex items-center  items-between merriweather text-2xl marginrelativo">
+                                        <span class="icon-[material-symbols--mail] m-[20px]  text-5xl"></span><p>paugf2004@gmail.com</p>
+                                    </div>
+                               
+                                <a href="https://www.linkedin.com/in/pau-gallego-b975b0273/" target="_blank">
+    
+                                    <div class="flex items-center  items-between merriweather text-2xl marginrelativo">
+                                        <span class="icon-[mdi--linkedin] m-[20px] text-5xl"></span><p>Pau Gallego</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/PauGallego" target="_blank">
+    
+                                    <div class="flex items-center  items-between merriweather text-2xl marginrelativo">
+                                        <span class="icon-[mdi--github] m-[20px] text-5xl"></span><p>PauGallego</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            
+                        </div>
                         
                     </div>
                     <div id="pag2">
@@ -208,6 +237,11 @@ import X from '../components/X.astro';
                                 marginbottom= 'max(13vh, 100px)';
                             />
 
+                        </div>
+
+                        <!-- Contact -->
+                        <div id="contactpag2" class="flex justify-center items-center h-[100%] hidden ">
+                            <img src="/imgs/belongs.png" alt="cuervo sentado" class="w-[90%]">
                         </div>
 
                     </div>  
@@ -364,6 +398,8 @@ import X from '../components/X.astro';
         let skillspag2 = document.getElementById("skillspag2");
         let projectspag1 = document.getElementById("projectspag1");
         let projectspag2 = document.getElementById("projectspag2");
+        let contactpag1 = document.getElementById("contactpag1");
+        let contactpag2 = document.getElementById("contactpag2");
 
 
 
@@ -392,6 +428,8 @@ import X from '../components/X.astro';
             skillspag2.classList.add("hidden");
             projectspag1.classList.add("hidden");
             projectspag2.classList.add("hidden");
+            contactpag1.classList.add("hidden");
+            contactpag2.classList.add("hidden");
                 
 
                 
@@ -422,6 +460,8 @@ import X from '../components/X.astro';
             skillspag2.classList.remove("hidden");
             projectspag1.classList.add("hidden");
             projectspag2.classList.add("hidden");
+            contactpag1.classList.add("hidden");
+            contactpag2.classList.add("hidden");
 
                 
         };
@@ -449,6 +489,8 @@ import X from '../components/X.astro';
             skillspag2.classList.add("hidden");
             projectspag1.classList.remove("hidden");
             projectspag2.classList.remove("hidden");
+            contactpag1.classList.add("hidden");
+            contactpag2.classList.add("hidden");
 
                 
         };
@@ -469,6 +511,15 @@ import X from '../components/X.astro';
             libro2top.classList.remove("hidden");
             libro3top.classList.remove("hidden");
             libro4top.classList.add("hidden");
+            
+            aboutpag1.classList.add("hidden");
+            aboutpag2.classList.add("hidden");
+            skillspag1.classList.add("hidden");
+            skillspag2.classList.add("hidden");
+            projectspag1.classList.add("hidden");
+            projectspag2.classList.add("hidden");
+            contactpag1.classList.remove("hidden");
+            contactpag2.classList.remove("hidden");
             
         };
 
@@ -718,6 +769,10 @@ import X from '../components/X.astro';
         width: 100vw;
         margin: auto;
 
+    }
+
+    .marginrelativo{
+        margin-top:  max(10vh, 20px);
     }
 
     #divlibro{
