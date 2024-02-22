@@ -178,11 +178,12 @@ import X from '../components/X.astro';
                             <h3 class="text-center text-5xl m-[50px] merriweather font-bold">Contact:</h3>
 
                             <div>
-                            
-
+                                
+                                <a href="mailto:paugf2004@gmail.com?subject=Contacto desde Portfolio" target="_blank">
                                     <div class="flex items-center  items-between merriweather text-2xl marginrelativo">
                                         <span class="icon-[material-symbols--mail] m-[20px]  text-5xl"></span><p>paugf2004@gmail.com</p>
                                     </div>
+                                </a>
                                
                                 <a href="https://www.linkedin.com/in/pau-gallego-b975b0273/" target="_blank">
     
@@ -277,7 +278,7 @@ import X from '../components/X.astro';
                     
                 
                 <div id="pagmovil">
-                    
+                
                     <!--  Menu -->
                     <div id="sec1" class="">
                         <div id="menukindle" class="flex  mt-[20px] items-center">
@@ -335,7 +336,7 @@ import X from '../components/X.astro';
                             />  
                         </div>
                         <div class="imagentitulo flex flex-col justify-center items-center">
-                            <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">ABOUT ME:</h3>
+                            <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">ABOUT ME</h3>
                             <img src="/imgs/CUERVO_SENTADO.png" alt="cuervo sentado" class="w-[70%]">
                         </div>
                         <div class="flechamovil" id="aboutadelante">
@@ -381,7 +382,7 @@ import X from '../components/X.astro';
                             />  
                         </div>
                         <div class="imagentitulo flex flex-col justify-center items-center">
-                            <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">SKILLS:</h3>
+                            <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">SKILLS</h3>
                             <img src="/imgs/CUERVO_PORTATIL_SINFONDO.png" alt="cuervo portatil" class="w-[70%]">
                         </div>
                         <div class="flechamovil" id="skillsadelante">
@@ -467,6 +468,35 @@ import X from '../components/X.astro';
         
                         />  
                         </div>
+                    </div>
+                        <!-- Contact-->
+                        <div id="contact1" class="hidden">
+                        <div class="equis" id="cerrarcontact">
+                            <X
+                            widthv='30px';
+                            heightv='30px';
+                            />  
+                        </div>
+                        <div>
+                            
+                        <a href="mailto:paugf2004@gmail.com?subject=Contacto desde Portfolio" target="_blank">
+                            <div class="flex items-center  items-between bookerly text-2xl m-[30px]">
+                                <span class="icon-[material-symbols--mail] m-[20px]  text-5xl"></span><p>paugf2004@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/pau-gallego-b975b0273/" target="_blank">
+
+                            <div class="flex items-center  items-between bookerly text-2xl m-[30px]">
+                                <span class="icon-[mdi--linkedin] m-[20px] text-5xl"></span><p>Pau Gallego</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/PauGallego" target="_blank">
+
+                            <div class="flex items-center  items-between bookerly text-2xl m-[30px]">
+                                <span class="icon-[mdi--github] m-[20px] text-5xl"></span><p>PauGallego</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -786,6 +816,26 @@ import X from '../components/X.astro';
             moverpag(projects1,projects2);
            
 
+        };
+
+        book4.onclick = (event) => {
+
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            let contact1 = document.getElementById("contact1");
+            moverpag(contact1,sec1);
+
+        };
+
+        let cerrarcontact = document.getElementById("cerrarcontact");
+    
+        cerrarcontact.onclick = (event) => {
+
+            event.preventDefault();;
+            let contact1 = document.getElementById("contact1");
+
+            volveralmenu(contact1);
+         
         };
 
         function refresh(){
