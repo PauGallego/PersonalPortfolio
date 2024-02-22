@@ -277,7 +277,7 @@ import X from '../components/X.astro';
                     
                 
                 <div id="pagmovil">
-
+                    
                     <!--  Menu -->
                     <div id="sec1" class="">
                         <div id="menukindle" class="flex  mt-[20px] items-center">
@@ -304,17 +304,17 @@ import X from '../components/X.astro';
                                     </div>
         
                                 </a>
-                                <a href="" >
+                                <a href="" id="click2">
                                     <div id="skillsmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
                                         <p class="text-center pt-[30px] text-white titulo">SKILLS</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="" id="click3">
                                     <div id="projectsmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
                                         <p class="text-center pt-[30px] text-white titulo">PROJECTS</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="" id="click4">
                                     <div id="contactmovil" class="fixmovil w-[120px] h-[170px] ml-[20px] mr-[20px] mb-[0px] ">
                                         <p class="text-center pt-[30px] text-white titulo">CONTACT</p>
                                     </div>
@@ -368,7 +368,105 @@ import X from '../components/X.astro';
                             heightv='50px';
                             rotation='-1'
         
+                            />  
+                        </div>
+                    </div> 
+
+                    <!--Skills -->
+                    <div id="skills1" class="hidden">
+                        <div class="equis" id="cerrarskills">
+                            <X
+                            widthv='30px';
+                            heightv='30px';
+                            />  
+                        </div>
+                        <div class="imagentitulo flex flex-col justify-center items-center">
+                            <h3 class="text-center text-5xl mt-[50px] bookerly font-bold">SKILLS:</h3>
+                            <img src="/imgs/CUERVO_PORTATIL_SINFONDO.png" alt="cuervo portatil" class="w-[70%]">
+                        </div>
+                        <div class="flechamovil" id="skillsadelante">
+                            <FlechaMovil 
+                            widthv='80px';
+                            heightv='50px';
+                            rotation='1'
+                            />  
+                        </div>
+                    </div>
+
+                    <div id="skills2" class="hidden">
+                        <div class="equis" id="cerrarskills2">
+                            <X
+                            widthv='30px';
+                            heightv='30px';
                         />  
+                        </div>
+                        <div class=" flex flex-col justify-center items-center">
+                            <ul class="list-disc">
+                                <li class="text-xl merriweather m-[15px] textomovil">Linux</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">Docker</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">VPS</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">HTML5/CSS3/JS</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">Node JS</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">PHP</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">SpringBoot</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">C++</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">Java</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">Python</li>
+                                <li class="text-xl merriweather m-[15px] textomovil">PLSQL</li>
+                            </ul>
+                        </div>
+                        <div class="flechamovil2" id="skillsatras">
+                            <FlechaMovil 
+                            widthv='80px';
+                            heightv='50px';
+                            rotation='-1'
+        
+                        />  
+                        </div>
+                    </div>
+                    <!--Projects -->
+                    <div id="projects1" class="hidden">
+                        <div class="equis" id="cerrarprojects">
+                            <X
+                            widthv='30px';
+                            heightv='30px';
+                            />  
+                        </div>
+                        <div class="imagentitulo flex flex-col justify-center items-center">
+                            <h3 class="text-center text-4xl mt-[20px] bookerly font-bold">SteelCodeTeam</h3>
+                            <img src="/imgs/steel.png" alt="cuervo portatil" class="w-[40%] mt-[10px]">
+                            <p class="text-xl m-[20px] bookerly">An open-source development group dedicated to bringing creative ideas to life within the captivating universe of Brandon Sanderson Cosmere book series</p>
+                            <p class="text-xl m-[20px] bookerly download"> <a href="http://steelcode.team/" target="_blank">Access Website</a></p>
+                        </div>
+                        <div class="flechamovil" id="projectsadelante">
+                            <FlechaMovil 
+                            widthv='80px';
+                            heightv='50px';
+                            rotation='1'
+                            />  
+                        </div>
+                    </div>
+                    <div id="projects2" class="hidden">
+                        <div class="equis" id="cerrarprojects2">
+                            <X
+                            widthv='30px';
+                            heightv='30px';
+                            />  
+                        </div>
+                        <div class="imagentitulo flex flex-col justify-center items-center">
+                            <h3 class="text-center text-4xl mt-[20px] bookerly font-bold">Odoo2Dev</h3>
+                            <img src="/imgs/odoo.png" alt="cuervo portatil" class="w-[70%] mt-[20px]">
+                            <p class="text-xl m-[20px] bookerly mt-[40px]">I"ve crafted a Docker container on GitHub for Odoo module development. This container streamlines the process, offering a consistent environment with all dependencies.</p>
+                            <p class="text-xl m-[20px] bookerly download"> <a href="https://github.com/PauGallego/odoo2dev" target="_blank">Access Github</a></p>
+                        </div>
+                         <div class="flechamovil2" id="projectsatras">
+                            <FlechaMovil 
+                            widthv='80px';
+                            heightv='50px';
+                            rotation='-1'
+        
+                        />  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -377,6 +475,9 @@ import X from '../components/X.astro';
     
     <script>
         let book1 = document.getElementById("click1");
+        let book2 = document.getElementById("click2");
+        let book3 = document.getElementById("click3");
+        let book4 = document.getElementById("click4");
         let pagmovil = document.getElementById("pagmovil");
         let divlibro = document.getElementById("divlibro");
         let tela = document.getElementById("tela");
@@ -527,45 +628,35 @@ import X from '../components/X.astro';
             contactpag2.classList.remove("hidden");
             
         };
-
-
-
     
         book1.onclick = (event) => {
 
             event.preventDefault();
             let sec1 = document.getElementById("sec1");
-            sec1.style.display = "none";
             let about1 = document.getElementById("about1");
-            about1.style.display = "block";
+            moverpag(about1,sec1);
     
-            refresh();
         };
-    
+
         let cerrarabout = document.getElementById("cerrarabout");
     
         cerrarabout.onclick = (event) => {
 
-            event.preventDefault();
-            let sec1 = document.getElementById("sec1");
-            sec1.style.display = "block";
+            event.preventDefault();;
             let about1 = document.getElementById("about1");
-            about1.style.display = "none";
-          
-            refresh();
+
+            volveralmenu(about1);
+         
         };
         
         let cerrarabout2 = document.getElementById("cerrarabout2");
     
         cerrarabout2.onclick = (event) => {
 
-            event.preventDefault();
-            let sec1 = document.getElementById("sec1");
-            sec1.style.display = "block";
+            event.preventDefault();;
             let about2 = document.getElementById("about2");
-            about2.style.display = "none";
 
-            refresh();
+            volveralmenu(about2);
         };
         
 
@@ -575,12 +666,8 @@ import X from '../components/X.astro';
 
             event.preventDefault();
             let about1 = document.getElementById("about1");
-            about1.style.display = "none";
             let about2 = document.getElementById("about2");
-            about2.style.display = "block";
-
-
-            refresh();
+            moverpag(about2,about1);
         };
 
         let aboutatras = document.getElementById("aboutatras");
@@ -589,11 +676,116 @@ import X from '../components/X.astro';
 
             event.preventDefault();
             let about1 = document.getElementById("about1");
-            about1.style.display = "block";
             let about2 = document.getElementById("about2");
-            about2.style.display = "none";
+            moverpag(about1,about2);
            
-            refresh();
+
+        };
+
+        book2.onclick = (event) => {
+
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            let skills1 = document.getElementById("skills1");
+            moverpag(skills1,sec1);
+    
+        };
+
+        let cerrarskills = document.getElementById("cerrarskills");
+    
+        cerrarskills.onclick = (event) => {
+
+            event.preventDefault();;
+            let skills1 = document.getElementById("skills1");
+
+            volveralmenu(skills1);
+         
+        };
+        
+        let cerrarskills2 = document.getElementById("cerrarskills2");
+    
+        cerrarskills2.onclick = (event) => {
+
+            event.preventDefault();;
+            let skills2 = document.getElementById("skills2");
+
+            volveralmenu(skills2);
+        };
+        
+
+        let skillsadelante = document.getElementById("skillsadelante");
+
+        skillsadelante.onclick = (event) => {
+
+            event.preventDefault();
+            let skills1 = document.getElementById("skills1");
+            let skills2 = document.getElementById("skills2");
+            moverpag(skills2,skills1);
+        };
+
+        let skillsatras = document.getElementById("skillsatras");
+
+        skillsatras.onclick = (event) => {
+
+            event.preventDefault();
+            let skills1 = document.getElementById("skills1");
+            let skills2 = document.getElementById("skills2");
+            moverpag(skills1,skills2);
+           
+
+        };
+
+        book3.onclick = (event) => {
+
+            event.preventDefault();
+            let sec1 = document.getElementById("sec1");
+            let projects1 = document.getElementById("projects1");
+            moverpag(projects1,sec1);
+    
+        };
+
+        let cerrarprojects = document.getElementById("cerrarprojects");
+    
+        cerrarprojects.onclick = (event) => {
+
+            event.preventDefault();;
+            let projects1 = document.getElementById("projects1");
+
+            volveralmenu(projects1);
+         
+        };
+        
+        let cerrarprojects2 = document.getElementById("cerrarprojects2");
+    
+        cerrarprojects2.onclick = (event) => {
+
+            event.preventDefault();;
+            let projects2 = document.getElementById("projects2");
+
+            volveralmenu(projects2);
+        };
+        
+
+        let projectsadelante = document.getElementById("projectsadelante");
+
+        projectsadelante.onclick = (event) => {
+
+            event.preventDefault();
+            let projects1 = document.getElementById("projects1");
+            let projects2 = document.getElementById("projects2");
+            moverpag(projects2,projects1);
+        };
+
+        let projectsatras = document.getElementById("projectsatras");
+
+        projectsatras.onclick = (event) => {
+
+            event.preventDefault();
+            let projects1 = document.getElementById("projects1");
+            let projects2 = document.getElementById("projects2");
+            moverpag(projects1,projects2);
+           
+
         };
 
         function refresh(){
@@ -601,6 +793,21 @@ import X from '../components/X.astro';
             pagmovil.style.animation = "none";
             void pagmovil.offsetWidth; 
             pagmovil.style.animation = "refresh 0.3s linear";
+        }
+
+
+        function volveralmenu(element){
+            let sec1 = document.getElementById("sec1");
+            sec1.style.display = "block";
+            element.style.display = "none";
+
+            refresh();
+        }
+
+        function moverpag(element1, element2){
+            element1.style.display = "block";
+            element2.style.display = "none";
+            refresh();
         }
         
 
@@ -914,16 +1121,25 @@ import X from '../components/X.astro';
 
     #aboutmovil{
         background-image: url("/books/1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 
     #skillsmovil{
         background-image: url("/books/2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 
     #projectsmovil{
         background-image: url("/books/3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 
@@ -1097,7 +1313,8 @@ import X from '../components/X.astro';
             height: max(84vh, 908px);
             background-color: #95BDE8;
         }
-       
+
+        
     }
 
 
@@ -1119,12 +1336,24 @@ import X from '../components/X.astro';
             padding-top: 20px;
         }
 
-        {
+        h3 {
             font-size: 2.5em !important;
         }
 
         .download{
             margin-top: 70px;
+        }
+
+        #skills2 ul{
+            margin-top: 50px;
+        }
+
+        #skills2 .flechamovil2{
+            margin-top: 50px;
+        }
+
+        #projects2 img{
+            margin-top: 60px;
         }
 
     }
